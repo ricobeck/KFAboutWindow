@@ -13,6 +13,8 @@
 
 + (instancetype)attributedStringWithCocoaPodsAcknowledgementsAtPath:(NSString *)acknowledgementsPath;
 
++ (instancetype)attributedStringWithCocoaPodsAcknowledgementsAtPath:(NSString *)acknowledgementsPath foregroundColor:(NSColor *)foregroundColor;
+
 + (instancetype)attributedStringWithCocoaPodsAcknowledgementsAtPath:(NSString *)acknowledgementsPath headlineTextAttributes:(NSDictionary *)headlineTextAttributes bodyTextAttributes:(NSDictionary *)bodyTextAttributes;
 
 

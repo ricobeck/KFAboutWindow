@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D6B15C918C9EAD3001A1BC3 /* KFAboutWindowStyleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B15C818C9EAD3001A1BC3 /* KFAboutWindowStyleModel.m */; };
+		1D6B15CA18C9EAD3001A1BC3 /* KFAboutWindowStyleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B15C818C9EAD3001A1BC3 /* KFAboutWindowStyleModel.m */; };
 		1D8FD4B818C7D7CD00D9A9FA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8FD4B718C7D7CD00D9A9FA /* Cocoa.framework */; };
 		1D8FD4C218C7D7CD00D9A9FA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D8FD4C018C7D7CD00D9A9FA /* InfoPlist.strings */; };
 		1D8FD4C418C7D7CD00D9A9FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8FD4C318C7D7CD00D9A9FA /* main.m */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D6B15C718C9EAD3001A1BC3 /* KFAboutWindowStyleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KFAboutWindowStyleModel.h; path = ../../Classes/osx/KFAboutWindowStyleModel.h; sourceTree = "<group>"; };
+		1D6B15C818C9EAD3001A1BC3 /* KFAboutWindowStyleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KFAboutWindowStyleModel.m; path = ../../Classes/osx/KFAboutWindowStyleModel.m; sourceTree = "<group>"; };
 		1D8FD4B418C7D7CD00D9A9FA /* KFAboutWindowPreview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KFAboutWindowPreview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8FD4B718C7D7CD00D9A9FA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1D8FD4BA18C7D7CD00D9A9FA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -142,6 +146,8 @@
 				1D8FD4CA18C7D7CD00D9A9FA /* KFAppDelegate.m */,
 				1D8FD4F018C7DC0900D9A9FA /* KFAboutWindowController.h */,
 				1D8FD4F118C7DC0900D9A9FA /* KFAboutWindowController.m */,
+				1D6B15C718C9EAD3001A1BC3 /* KFAboutWindowStyleModel.h */,
+				1D6B15C818C9EAD3001A1BC3 /* KFAboutWindowStyleModel.m */,
 				1DA9F25818C88FE6001BAB97 /* KFWebsiteButtonBundleNameTransformer.h */,
 				1DA9F25918C88FE6001BAB97 /* KFWebsiteButtonBundleNameTransformer.m */,
 				1DA9F25E18C8B7DB001BAB97 /* NSAttributedString+CocoaPods.h */,
@@ -290,6 +296,7 @@
 			files = (
 				1D8FD4F218C7DC0900D9A9FA /* KFAboutWindowController.m in Sources */,
 				1DA9F26018C8B7DB001BAB97 /* NSAttributedString+CocoaPods.m in Sources */,
+				1D6B15C918C9EAD3001A1BC3 /* KFAboutWindowStyleModel.m in Sources */,
 				1D8FD4C418C7D7CD00D9A9FA /* main.m in Sources */,
 				1D8FD4CB18C7D7CD00D9A9FA /* KFAppDelegate.m in Sources */,
 				1DAE6BE618C9280B003AB960 /* KFAutoScrollTextView.m in Sources */,
@@ -303,6 +310,7 @@
 			files = (
 				1D8FD4E218C7D7CE00D9A9FA /* KFAboutWindowPreviewTests.m in Sources */,
 				1DA9F26118C8B7DB001BAB97 /* NSAttributedString+CocoaPods.m in Sources */,
+				1D6B15CA18C9EAD3001A1BC3 /* KFAboutWindowStyleModel.m in Sources */,
 				1DAE6BE718C9280B003AB960 /* KFAutoScrollTextView.m in Sources */,
 				1DA9F25B18C88FE6001BAB97 /* KFWebsiteButtonBundleNameTransformer.m in Sources */,
 			);

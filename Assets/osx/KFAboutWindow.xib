@@ -8,9 +8,12 @@
             <connections>
                 <outlet property="appIconImageView" destination="d1v-7U-eFh" id="YP7-JS-YLJ"/>
                 <outlet property="backgroundImageView" destination="Mai-NF-7SZ" id="10m-Jv-EuA"/>
+                <outlet property="bundleNameLabel" destination="jBb-2a-idr" id="r72-EN-fwg"/>
+                <outlet property="humanReadableCopyrightLabel" destination="TmW-xh-BIy" id="kl6-l6-ZPf"/>
                 <outlet property="scrollTextView" destination="s7r-p9-WmY" id="whF-h1-EN1"/>
                 <outlet property="toggleDisplayButton" destination="KpE-Xt-NXa" id="3qa-z1-E95"/>
                 <outlet property="topContentView" destination="pAY-dC-RMX" id="YE8-D2-u2w"/>
+                <outlet property="versionLabel" destination="14L-ty-8V1" id="kzk-iM-x91"/>
                 <outlet property="visitWebsiteButton" destination="IWS-wC-pcR" id="q1g-Iz-vi1"/>
                 <outlet property="window" destination="1" id="RK2-aX-Pyc"/>
             </connections>
@@ -82,7 +85,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="328" height="142"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView editable="NO" selectable="NO" drawsBackground="NO" importsGraphics="NO" richText="NO" findStyle="panel" continuousSpellChecking="YES" verticallyResizable="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="s7r-p9-WmY" customClass="KFAutoScrollTextView">
+                                        <textView editable="NO" selectable="NO" importsGraphics="NO" richText="NO" findStyle="panel" continuousSpellChecking="YES" verticallyResizable="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="s7r-p9-WmY" customClass="KFAutoScrollTextView">
                                             <rect key="frame" x="0.0" y="0.0" width="328" height="142"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -9,6 +9,7 @@
 #import "KFAboutWindowController.h"
 #import "NSAttributedString+CocoaPods.h"
 #import "KFAutoScrollTextView.h"
+#import "KFAboutWindowStyleModel.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -27,6 +28,13 @@ typedef NS_ENUM(NSUInteger, KFAboutDisplayMode)
 @property (weak) IBOutlet NSImageView *backgroundImageView;
 
 @property (weak) IBOutlet NSImageView *appIconImageView;
+
+@property (weak) IBOutlet NSTextField *bundleNameLabel;
+
+@property (weak) IBOutlet NSTextField *versionLabel;
+
+@property (weak) IBOutlet NSTextField *humanReadableCopyrightLabel;
+
 
 @property (unsafe_unretained) IBOutlet KFAutoScrollTextView *scrollTextView;
 
@@ -103,7 +111,6 @@ typedef NS_ENUM(NSUInteger, KFAboutDisplayMode)
     }
    
     NSString *acknowledgementsPath = [[NSBundle mainBundle] pathForResource:@"Acknowledgements" ofType:@"plist"];
-    
     if (acknowledgementsPath != nil)
     {
         self.acknowledgements = [NSAttributedString attributedStringWithCocoaPodsAcknowledgementsAtPath:acknowledgementsPath];
@@ -152,6 +159,37 @@ typedef NS_ENUM(NSUInteger, KFAboutDisplayMode)
 }
 
 
+- (void)applyStyle:(KFAboutWindowStyleModel *)styleModel
+{
+    if (styleModel.backgroundImage != nil)
+    {
+        [self setBackgroundImage:styleModel.backgroundImage];
+    }
+    if (styleModel.backgroundColor != nil)
+    {
+        [self setBackgroundColor:styleModel.backgroundColor];
+    }
+    if (styleModel.bundleNameColor != nil)
+    {
+        [self.bundleNameLabel setTextColor:styleModel.bundleNameColor];
+    }
+    if (styleModel.versionColor != nil)
+    {
+        [self.versionLabel setTextColor:styleModel.versionColor];
+    }
+    if (styleModel.acknowlegdementsTextColor != nil)
+    {
+        NSMutableAttributedString *styledAcknowledgements = [self.acknowledgements mutableCopy];
+        [styledAcknowledgements setAttributes:@{NSForegroundColorAttributeName:styleModel.acknowlegdementsTextColor} range:NSMakeRange(0, [self.acknowledgements length])];
+        self.acknowledgements = [styledAcknowledgements copy];
+    }
+    if (styleModel.humanReadableCopyrightsColor != nil)
+    {
+        [self.humanReadableCopyrightLabel setTextColor:styleModel.humanReadableCopyrightsColor];
+    }
+    
+}
+
 #pragma mark - Window show/hide
 
 
@@ -182,6 +220,9 @@ typedef NS_ENUM(NSUInteger, KFAboutDisplayMode)
     [self removeObservers];
     [self.window setIsVisible:NO];
     [self.scrollTextView stopScrolling];
+    
+    self.displayMode = KFAboutDisplayModeCredits;
+    [self updateModeValues];
 }
 
 

@@ -13,11 +13,16 @@
 @implementation NSAttributedString (CocoaPods)
 
 
-
 + (instancetype)attributedStringWithCocoaPodsAcknowledgementsAtPath:(NSString *)acknowledgementsPath
 {
-    NSDictionary *bodyTextattributes = @{NSFontAttributeName : [NSFont systemFontOfSize:[NSFont smallSystemFontSize]]};
-    NSDictionary *headlineTextAttributes = @{NSFontAttributeName : [NSFont boldSystemFontOfSize:[NSFont smallSystemFontSize]]};
+    return [self attributedStringWithCocoaPodsAcknowledgementsAtPath:acknowledgementsPath foregroundColor:[NSColor blackColor]];
+}
+
+
++ (instancetype)attributedStringWithCocoaPodsAcknowledgementsAtPath:(NSString *)acknowledgementsPath foregroundColor:(NSColor *)foregroundColor
+{
+    NSDictionary *bodyTextattributes = @{NSForegroundColorAttributeName: foregroundColor, NSFontAttributeName : [NSFont systemFontOfSize:[NSFont smallSystemFontSize]]};
+    NSDictionary *headlineTextAttributes = @{NSForegroundColorAttributeName: foregroundColor, NSFontAttributeName : [NSFont boldSystemFontOfSize:[NSFont smallSystemFontSize]]};
     
     return [self attributedStringWithCocoaPodsAcknowledgementsAtPath:acknowledgementsPath headlineTextAttributes:headlineTextAttributes bodyTextAttributes:bodyTextattributes];
 }
