@@ -6,7 +6,11 @@
 //  Copyright (c) 2014 KF Interactive. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
+
+
+@class KFAboutWindowStyleModel;
+
 
 @interface KFAboutWindowController : NSWindowController
 
@@ -30,6 +34,8 @@
 - (void)setBackgroundImage:(NSImage *)backgroundImage;
 
 - (void)setBackgroundColor:(NSColor *)backgroundColor;
+
+- (void)applyStyle:(KFAboutWindowStyleModel *)styleModel;
 
 
 @end
