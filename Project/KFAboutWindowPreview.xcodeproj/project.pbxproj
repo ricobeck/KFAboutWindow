@@ -23,6 +23,8 @@
 		1D685CAB18DC9F0E00DBEADB /* KFAboutWindowMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D685CAA18DC9F0E00DBEADB /* KFAboutWindowMobileTests.m */; };
 		1D685CB418DC9FD200DBEADB /* KFAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D685CB318DC9FD200DBEADB /* KFAboutViewController.m */; };
 		1D685CB518DCFF6300DBEADB /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1D8FD4C618C7D7CD00D9A9FA /* Credits.rtf */; };
+		1D685CB618DD00E500DBEADB /* Acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DA9F25618C887D0001BAB97 /* Acknowledgements.plist */; };
+		1D685CB718DD011700DBEADB /* NSAttributedString+CocoaPods.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA9F25F18C8B7DB001BAB97 /* NSAttributedString+CocoaPods.m */; };
 		1D6B15C918C9EAD3001A1BC3 /* KFAboutWindowStyleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B15C818C9EAD3001A1BC3 /* KFAboutWindowStyleModel.m */; };
 		1D6B15CA18C9EAD3001A1BC3 /* KFAboutWindowStyleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B15C818C9EAD3001A1BC3 /* KFAboutWindowStyleModel.m */; };
 		1D8FD4B818C7D7CD00D9A9FA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8FD4B718C7D7CD00D9A9FA /* Cocoa.framework */; };
@@ -426,6 +428,7 @@
 				1D685CB518DCFF6300DBEADB /* Credits.rtf in Resources */,
 				1D685C9418DC9F0E00DBEADB /* Main_iPad.storyboard in Resources */,
 				1D685C9918DC9F0E00DBEADB /* Images.xcassets in Resources */,
+				1D685CB618DD00E500DBEADB /* Acknowledgements.plist in Resources */,
 				1D685C9118DC9F0E00DBEADB /* Main_iPhone.storyboard in Resources */,
 				1D685C8818DC9F0E00DBEADB /* InfoPlist.strings in Resources */,
 			);
@@ -470,6 +473,7 @@
 				1D685C8A18DC9F0E00DBEADB /* main.m in Sources */,
 				1D685C8E18DC9F0E00DBEADB /* KFAppDelegate.m in Sources */,
 				1D685CB418DC9FD200DBEADB /* KFAboutViewController.m in Sources */,
+				1D685CB718DD011700DBEADB /* NSAttributedString+CocoaPods.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

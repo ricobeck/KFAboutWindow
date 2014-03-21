@@ -7,6 +7,7 @@
 //
 
 #import "KFAboutViewController.h"
+#import "NSAttributedString+CocoaPods.h"
 
 @interface KFAboutViewController () <UIScrollViewDelegate>
 
@@ -20,8 +21,12 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
+@property (nonatomic, copy) NSAttributedString *credits;
+
+@property (nonatomic, copy) NSAttributedString *acknowledgements;
 
 @end
+
 
 @implementation KFAboutViewController
 
@@ -41,7 +46,11 @@
     self.navigationItem.titleView = self.titleView;
     
     NSURL *creditsURL = [[NSBundle mainBundle] URLForResource:@"Credits" withExtension:@"rtf"];
-    self.textView.attributedText = [[NSAttributedString alloc] initWithFileURL:creditsURL options:nil documentAttributes:nil error:nil];
+    self.credits = [[NSAttributedString alloc] initWithFileURL:creditsURL options:nil documentAttributes:nil error:nil];
+    
+    NSString *acknowledgementsPath = [[NSBundle mainBundle] pathForResource:@"Acknowledgements" ofType:@"plist"];
+    self.acknowledgements = [NSAttributedString attributedStringWithCocoaPodsAcknowledgementsAtPath:acknowledgementsPath];
+    self.textView.attributedText = self.acknowledgements;
 }
 
 
