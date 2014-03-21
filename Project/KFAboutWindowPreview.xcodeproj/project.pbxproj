@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D685C7E18DC9F0E00DBEADB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D685C7D18DC9F0E00DBEADB /* Foundation.framework */; };
+		1D685C8018DC9F0E00DBEADB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D685C7F18DC9F0E00DBEADB /* CoreGraphics.framework */; };
+		1D685C8218DC9F0E00DBEADB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D685C8118DC9F0E00DBEADB /* UIKit.framework */; };
+		1D685C8818DC9F0E00DBEADB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D685C8618DC9F0E00DBEADB /* InfoPlist.strings */; };
+		1D685C8A18DC9F0E00DBEADB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D685C8918DC9F0E00DBEADB /* main.m */; };
+		1D685C8E18DC9F0E00DBEADB /* KFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D685C8D18DC9F0E00DBEADB /* KFAppDelegate.m */; };
+		1D685C9118DC9F0E00DBEADB /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D685C8F18DC9F0E00DBEADB /* Main_iPhone.storyboard */; };
+		1D685C9418DC9F0E00DBEADB /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D685C9218DC9F0E00DBEADB /* Main_iPad.storyboard */; };
+		1D685C9918DC9F0E00DBEADB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D685C9818DC9F0E00DBEADB /* Images.xcassets */; };
+		1D685C9F18DC9F0E00DBEADB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8FD4D618C7D7CE00D9A9FA /* XCTest.framework */; };
+		1D685CA018DC9F0E00DBEADB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D685C7D18DC9F0E00DBEADB /* Foundation.framework */; };
+		1D685CA118DC9F0E00DBEADB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D685C8118DC9F0E00DBEADB /* UIKit.framework */; };
+		1D685CA918DC9F0E00DBEADB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D685CA718DC9F0E00DBEADB /* InfoPlist.strings */; };
+		1D685CAB18DC9F0E00DBEADB /* KFAboutWindowMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D685CAA18DC9F0E00DBEADB /* KFAboutWindowMobileTests.m */; };
+		1D685CB418DC9FD200DBEADB /* KFAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D685CB318DC9FD200DBEADB /* KFAboutViewController.m */; };
+		1D685CB518DCFF6300DBEADB /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1D8FD4C618C7D7CD00D9A9FA /* Credits.rtf */; };
 		1D6B15C918C9EAD3001A1BC3 /* KFAboutWindowStyleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B15C818C9EAD3001A1BC3 /* KFAboutWindowStyleModel.m */; };
 		1D6B15CA18C9EAD3001A1BC3 /* KFAboutWindowStyleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B15C818C9EAD3001A1BC3 /* KFAboutWindowStyleModel.m */; };
 		1D8FD4B818C7D7CD00D9A9FA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8FD4B718C7D7CD00D9A9FA /* Cocoa.framework */; };
@@ -33,6 +49,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1D685CA218DC9F0E00DBEADB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D8FD4AC18C7D7CD00D9A9FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D685C7B18DC9F0E00DBEADB;
+			remoteInfo = KFAboutWindowMobile;
+		};
 		1D8FD4D918C7D7CE00D9A9FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1D8FD4AC18C7D7CD00D9A9FA /* Project object */;
@@ -43,6 +66,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D685C7C18DC9F0E00DBEADB /* KFAboutWindowMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KFAboutWindowMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D685C7D18DC9F0E00DBEADB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D685C7F18DC9F0E00DBEADB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1D685C8118DC9F0E00DBEADB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		1D685C8518DC9F0E00DBEADB /* KFAboutWindowMobile-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KFAboutWindowMobile-Info.plist"; sourceTree = "<group>"; };
+		1D685C8718DC9F0E00DBEADB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D685C8918DC9F0E00DBEADB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1D685C8B18DC9F0E00DBEADB /* KFAboutWindowMobile-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KFAboutWindowMobile-Prefix.pch"; sourceTree = "<group>"; };
+		1D685C8C18DC9F0E00DBEADB /* KFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KFAppDelegate.h; sourceTree = "<group>"; };
+		1D685C8D18DC9F0E00DBEADB /* KFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KFAppDelegate.m; sourceTree = "<group>"; };
+		1D685C9018DC9F0E00DBEADB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		1D685C9318DC9F0E00DBEADB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		1D685C9818DC9F0E00DBEADB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1D685C9E18DC9F0E00DBEADB /* KFAboutWindowMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KFAboutWindowMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D685CA618DC9F0E00DBEADB /* KFAboutWindowMobileTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KFAboutWindowMobileTests-Info.plist"; sourceTree = "<group>"; };
+		1D685CA818DC9F0E00DBEADB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D685CAA18DC9F0E00DBEADB /* KFAboutWindowMobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KFAboutWindowMobileTests.m; sourceTree = "<group>"; };
+		1D685CB218DC9FD200DBEADB /* KFAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KFAboutViewController.h; path = ../../Classes/ios/KFAboutViewController.h; sourceTree = "<group>"; };
+		1D685CB318DC9FD200DBEADB /* KFAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KFAboutViewController.m; path = ../../Classes/ios/KFAboutViewController.m; sourceTree = "<group>"; };
 		1D6B15C718C9EAD3001A1BC3 /* KFAboutWindowStyleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KFAboutWindowStyleModel.h; path = ../../Classes/osx/KFAboutWindowStyleModel.h; sourceTree = "<group>"; };
 		1D6B15C818C9EAD3001A1BC3 /* KFAboutWindowStyleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KFAboutWindowStyleModel.m; path = ../../Classes/osx/KFAboutWindowStyleModel.m; sourceTree = "<group>"; };
 		1D8FD4B418C7D7CD00D9A9FA /* KFAboutWindowPreview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KFAboutWindowPreview.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +120,26 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1D685C7918DC9F0E00DBEADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D685C8018DC9F0E00DBEADB /* CoreGraphics.framework in Frameworks */,
+				1D685C8218DC9F0E00DBEADB /* UIKit.framework in Frameworks */,
+				1D685C7E18DC9F0E00DBEADB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D685C9B18DC9F0E00DBEADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D685C9F18DC9F0E00DBEADB /* XCTest.framework in Frameworks */,
+				1D685CA118DC9F0E00DBEADB /* UIKit.framework in Frameworks */,
+				1D685CA018DC9F0E00DBEADB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1D8FD4B118C7D7CD00D9A9FA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -99,11 +161,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D685C8318DC9F0E00DBEADB /* KFAboutWindowMobile */ = {
+			isa = PBXGroup;
+			children = (
+				1D685C8C18DC9F0E00DBEADB /* KFAppDelegate.h */,
+				1D685C8D18DC9F0E00DBEADB /* KFAppDelegate.m */,
+				1D685C8F18DC9F0E00DBEADB /* Main_iPhone.storyboard */,
+				1D685C9218DC9F0E00DBEADB /* Main_iPad.storyboard */,
+				1D685CB218DC9FD200DBEADB /* KFAboutViewController.h */,
+				1D685CB318DC9FD200DBEADB /* KFAboutViewController.m */,
+				1D685C9818DC9F0E00DBEADB /* Images.xcassets */,
+				1D685C8418DC9F0E00DBEADB /* Supporting Files */,
+			);
+			path = KFAboutWindowMobile;
+			sourceTree = "<group>";
+		};
+		1D685C8418DC9F0E00DBEADB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D685C8518DC9F0E00DBEADB /* KFAboutWindowMobile-Info.plist */,
+				1D685C8618DC9F0E00DBEADB /* InfoPlist.strings */,
+				1D685C8918DC9F0E00DBEADB /* main.m */,
+				1D685C8B18DC9F0E00DBEADB /* KFAboutWindowMobile-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1D685CA418DC9F0E00DBEADB /* KFAboutWindowMobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				1D685CAA18DC9F0E00DBEADB /* KFAboutWindowMobileTests.m */,
+				1D685CA518DC9F0E00DBEADB /* Supporting Files */,
+			);
+			path = KFAboutWindowMobileTests;
+			sourceTree = "<group>";
+		};
+		1D685CA518DC9F0E00DBEADB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D685CA618DC9F0E00DBEADB /* KFAboutWindowMobileTests-Info.plist */,
+				1D685CA718DC9F0E00DBEADB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		1D8FD4AB18C7D7CD00D9A9FA = {
 			isa = PBXGroup;
 			children = (
 				1D8FD4BD18C7D7CD00D9A9FA /* KFAboutWindowPreview */,
 				1D8FD4DB18C7D7CE00D9A9FA /* KFAboutWindowPreviewTests */,
+				1D685C8318DC9F0E00DBEADB /* KFAboutWindowMobile */,
+				1D685CA418DC9F0E00DBEADB /* KFAboutWindowMobileTests */,
 				1D8FD4B618C7D7CD00D9A9FA /* Frameworks */,
 				1D8FD4B518C7D7CD00D9A9FA /* Products */,
 			);
@@ -114,6 +222,8 @@
 			children = (
 				1D8FD4B418C7D7CD00D9A9FA /* KFAboutWindowPreview.app */,
 				1D8FD4D518C7D7CE00D9A9FA /* KFAboutWindowPreviewTests.xctest */,
+				1D685C7C18DC9F0E00DBEADB /* KFAboutWindowMobile.app */,
+				1D685C9E18DC9F0E00DBEADB /* KFAboutWindowMobileTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,6 +234,9 @@
 				1DA9F25C18C8A515001BAB97 /* QuartzCore.framework */,
 				1D8FD4B718C7D7CD00D9A9FA /* Cocoa.framework */,
 				1D8FD4D618C7D7CE00D9A9FA /* XCTest.framework */,
+				1D685C7D18DC9F0E00DBEADB /* Foundation.framework */,
+				1D685C7F18DC9F0E00DBEADB /* CoreGraphics.framework */,
+				1D685C8118DC9F0E00DBEADB /* UIKit.framework */,
 				1D8FD4B918C7D7CD00D9A9FA /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -196,6 +309,41 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1D685C7B18DC9F0E00DBEADB /* KFAboutWindowMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D685CB018DC9F0E00DBEADB /* Build configuration list for PBXNativeTarget "KFAboutWindowMobile" */;
+			buildPhases = (
+				1D685C7818DC9F0E00DBEADB /* Sources */,
+				1D685C7918DC9F0E00DBEADB /* Frameworks */,
+				1D685C7A18DC9F0E00DBEADB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KFAboutWindowMobile;
+			productName = KFAboutWindowMobile;
+			productReference = 1D685C7C18DC9F0E00DBEADB /* KFAboutWindowMobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1D685C9D18DC9F0E00DBEADB /* KFAboutWindowMobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D685CB118DC9F0E00DBEADB /* Build configuration list for PBXNativeTarget "KFAboutWindowMobileTests" */;
+			buildPhases = (
+				1D685C9A18DC9F0E00DBEADB /* Sources */,
+				1D685C9B18DC9F0E00DBEADB /* Frameworks */,
+				1D685C9C18DC9F0E00DBEADB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D685CA318DC9F0E00DBEADB /* PBXTargetDependency */,
+			);
+			name = KFAboutWindowMobileTests;
+			productName = KFAboutWindowMobileTests;
+			productReference = 1D685C9E18DC9F0E00DBEADB /* KFAboutWindowMobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		1D8FD4B318C7D7CD00D9A9FA /* KFAboutWindowPreview */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D8FD4E518C7D7CE00D9A9FA /* Build configuration list for PBXNativeTarget "KFAboutWindowPreview" */;
@@ -241,6 +389,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "KF Interactive";
 				TargetAttributes = {
+					1D685C9D18DC9F0E00DBEADB = {
+						TestTargetID = 1D8FD4B318C7D7CD00D9A9FA;
+					};
 					1D8FD4D418C7D7CE00D9A9FA = {
 						TestTargetID = 1D8FD4B318C7D7CD00D9A9FA;
 					};
@@ -261,11 +412,33 @@
 			targets = (
 				1D8FD4B318C7D7CD00D9A9FA /* KFAboutWindowPreview */,
 				1D8FD4D418C7D7CE00D9A9FA /* KFAboutWindowPreviewTests */,
+				1D685C7B18DC9F0E00DBEADB /* KFAboutWindowMobile */,
+				1D685C9D18DC9F0E00DBEADB /* KFAboutWindowMobileTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1D685C7A18DC9F0E00DBEADB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D685CB518DCFF6300DBEADB /* Credits.rtf in Resources */,
+				1D685C9418DC9F0E00DBEADB /* Main_iPad.storyboard in Resources */,
+				1D685C9918DC9F0E00DBEADB /* Images.xcassets in Resources */,
+				1D685C9118DC9F0E00DBEADB /* Main_iPhone.storyboard in Resources */,
+				1D685C8818DC9F0E00DBEADB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D685C9C18DC9F0E00DBEADB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D685CA918DC9F0E00DBEADB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1D8FD4B218C7D7CD00D9A9FA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -290,6 +463,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1D685C7818DC9F0E00DBEADB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D685C8A18DC9F0E00DBEADB /* main.m in Sources */,
+				1D685C8E18DC9F0E00DBEADB /* KFAppDelegate.m in Sources */,
+				1D685CB418DC9FD200DBEADB /* KFAboutViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D685C9A18DC9F0E00DBEADB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D685CAB18DC9F0E00DBEADB /* KFAboutWindowMobileTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1D8FD4B018C7D7CD00D9A9FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -319,6 +510,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1D685CA318DC9F0E00DBEADB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D685C7B18DC9F0E00DBEADB /* KFAboutWindowMobile */;
+			targetProxy = 1D685CA218DC9F0E00DBEADB /* PBXContainerItemProxy */;
+		};
 		1D8FD4DA18C7D7CE00D9A9FA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1D8FD4B318C7D7CD00D9A9FA /* KFAboutWindowPreview */;
@@ -327,6 +523,38 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		1D685C8618DC9F0E00DBEADB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D685C8718DC9F0E00DBEADB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1D685C8F18DC9F0E00DBEADB /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D685C9018DC9F0E00DBEADB /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		1D685C9218DC9F0E00DBEADB /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D685C9318DC9F0E00DBEADB /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		1D685CA718DC9F0E00DBEADB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D685CA818DC9F0E00DBEADB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		1D8FD4C018C7D7CD00D9A9FA /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -362,6 +590,106 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1D685CAC18DC9F0E00DBEADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KFAboutWindowMobile/KFAboutWindowMobile-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "KFAboutWindowMobile/KFAboutWindowMobile-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1D685CAD18DC9F0E00DBEADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KFAboutWindowMobile/KFAboutWindowMobile-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "KFAboutWindowMobile/KFAboutWindowMobile-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1D685CAE18DC9F0E00DBEADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KFAboutWindowPreview.app/Contents/MacOS/KFAboutWindowPreview";
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KFAboutWindowMobile/KFAboutWindowMobile-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "KFAboutWindowMobileTests/KFAboutWindowMobileTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		1D685CAF18DC9F0E00DBEADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KFAboutWindowPreview.app/Contents/MacOS/KFAboutWindowPreview";
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KFAboutWindowMobile/KFAboutWindowMobile-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "KFAboutWindowMobileTests/KFAboutWindowMobileTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		1D8FD4E318C7D7CE00D9A9FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -499,6 +827,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1D685CB018DC9F0E00DBEADB /* Build configuration list for PBXNativeTarget "KFAboutWindowMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D685CAC18DC9F0E00DBEADB /* Debug */,
+				1D685CAD18DC9F0E00DBEADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1D685CB118DC9F0E00DBEADB /* Build configuration list for PBXNativeTarget "KFAboutWindowMobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D685CAE18DC9F0E00DBEADB /* Debug */,
+				1D685CAF18DC9F0E00DBEADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		1D8FD4AF18C7D7CD00D9A9FA /* Build configuration list for PBXProject "KFAboutWindowPreview" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
