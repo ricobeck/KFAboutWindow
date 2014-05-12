@@ -21,14 +21,12 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
-@property (nonatomic, copy) NSAttributedString *credits;
-
-@property (nonatomic, copy) NSAttributedString *acknowledgements;
-
 @end
 
 
 @implementation KFAboutViewController
+
+
 
 
 - (void)viewDidLoad
@@ -44,6 +42,13 @@
     [self.titleView addSubview:self.titleImageView];
 
     self.navigationItem.titleView = self.titleView;
+    
+    NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
+    
+    self.bundleName = info[@"CFBundleName"];
+    self.bundleShortVersion = info[@"CFBundleShortVersionString"];
+    self.bundleVersion = info[@"CFBundleVersion"];
+    self.humanReadableCopyright = info[@"NSHumanReadableCopyright"];
     
     NSURL *creditsURL = [[NSBundle mainBundle] URLForResource:@"Credits" withExtension:@"rtf"];
     self.credits = [[NSAttributedString alloc] initWithFileURL:creditsURL options:nil documentAttributes:nil error:nil];
@@ -76,8 +81,9 @@
     self.imageViewWidthConstraint.constant = b;
 
     CGFloat x = (CGRectGetWidth([UIScreen mainScreen].applicationFrame) - b) / 2.0;
-    x = floor([self.titleView convertPoint:CGPointMake(x, 0) fromView:nil].x);
+    x = floor([self.titleView convertPoint:CGPointMake(x, 0) fromView:nil].x) - .5;
     self.titleImageView.frame = CGRectMake(x, MAX(a1, -a), b, b);
 }
+
 
 @end
