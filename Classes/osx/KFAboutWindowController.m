@@ -10,6 +10,7 @@
 #import "NSAttributedString+CocoaPods.h"
 #import "KFAutoScrollTextView.h"
 #import "KFAboutWindowStyleModel.h"
+#import "KFGradientScrollView.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -29,7 +30,9 @@ typedef NS_ENUM(NSUInteger, KFAboutDisplayMode)
 @property (weak) IBOutlet NSTextField *versionLabel;
 @property (weak) IBOutlet NSTextField *humanReadableCopyrightLabel;
 
+@property (weak) IBOutlet KFGradientScrollView *scrollView;
 @property (unsafe_unretained) IBOutlet KFAutoScrollTextView *scrollTextView;
+
 @property (weak) IBOutlet NSButton *toggleDisplayButton;
 @property (weak) IBOutlet NSButton *visitWebsiteButton;
 
@@ -38,6 +41,7 @@ typedef NS_ENUM(NSUInteger, KFAboutDisplayMode)
 @property (nonatomic, copy) NSString *toggleButtonText;
 @property (nonatomic) NSNumber *disabledOption;
 @property (nonatomic) NSNumber *canToggleScroll;
+
 @end
 
 
@@ -77,15 +81,15 @@ typedef NS_ENUM(NSUInteger, KFAboutDisplayMode)
     borderRect.origin.y += 1;
     borderLayer.frame = borderRect;
     [self.topContentView.layer addSublayer:borderLayer];
-    
+
     NSTextContainer *container = [self.scrollTextView textContainer];
     [container setLineFragmentPadding:0];
     
     NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
     
-    self.bundleName = info[@"CFBundleName"];
-    self.bundleShortVersion = info[@"CFBundleShortVersionString"];
-    self.bundleVersion = info[@"CFBundleVersion"];
+    self.bundleName             = info[@"CFBundleName"];
+    self.bundleShortVersion     = info[@"CFBundleShortVersionString"];
+    self.bundleVersion          = info[@"CFBundleVersion"];
     self.humanReadableCopyright = info[@"NSHumanReadableCopyright"];
     
     NSString *creditsPath = [[NSBundle mainBundle] pathForResource:@"Credits" ofType:@"rtf"];

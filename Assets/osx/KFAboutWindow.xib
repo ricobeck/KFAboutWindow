@@ -11,6 +11,7 @@
                 <outlet property="bundleNameLabel" destination="jBb-2a-idr" id="r72-EN-fwg"/>
                 <outlet property="humanReadableCopyrightLabel" destination="TmW-xh-BIy" id="kl6-l6-ZPf"/>
                 <outlet property="scrollTextView" destination="s7r-p9-WmY" id="whF-h1-EN1"/>
+                <outlet property="scrollView" destination="KPY-md-Kp1" id="HbR-LL-f7a"/>
                 <outlet property="toggleDisplayButton" destination="KpE-Xt-NXa" id="3qa-z1-E95"/>
                 <outlet property="topContentView" destination="pAY-dC-RMX" id="YE8-D2-u2w"/>
                 <outlet property="versionLabel" destination="14L-ty-8V1" id="kzk-iM-x91"/>
@@ -74,8 +75,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="562" height="269"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="HyX-dY-9qp"/>
                             </imageView>
-                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPY-md-Kp1">
-                                <rect key="frame" x="214" y="53" width="328" height="138"/>
+                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPY-md-Kp1" customClass="KFGradientScrollView">
+                                <rect key="frame" x="214" y="51" width="328" height="140"/>
                                 <clipView key="contentView" copiesOnScroll="NO" id="unt-4E-7mq">
                                     <rect key="frame" x="0.0" y="0.0" width="328" height="142"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,7 +85,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="328" height="142"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="328" height="138"/>
+                                            <size key="minSize" width="50" height="140"/>
                                             <size key="maxSize" width="463" height="10000000"/>
                                             <attributedString key="textStorage">
                                                 <fragment content="Text">
@@ -95,7 +96,7 @@
                                                 </fragment>
                                             </attributedString>
                                             <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="328" height="138"/>
+                                            <size key="minSize" width="50" height="140"/>
                                             <size key="maxSize" width="463" height="10000000"/>
                                             <connections>
                                                 <binding destination="-2" name="attributedString" keyPath="self.attributedString" id="qEi-SN-Ok3"/>
@@ -105,6 +106,9 @@
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="328" id="Exq-oe-Zsh"/>
+                                </constraints>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="1oH-nv-r5V">
                                     <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                     <autoresizingMask key="autoresizingMask"/>
@@ -115,7 +119,7 @@
                                 </scroller>
                             </scrollView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TmW-xh-BIy">
-                                <rect key="frame" x="212" y="20" width="332" height="17"/>
+                                <rect key="frame" x="212" y="20" width="332" height="15"/>
                                 <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="hRI-9j-gaG">
                                     <font key="font" size="11" name="HelveticaNeue"/>
                                     <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
@@ -154,7 +158,7 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSApplicationIcon" id="G5b-xi-wv2"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jBb-2a-idr">
-                                <rect key="frame" x="210" y="222" width="332" height="27"/>
+                                <rect key="frame" x="212" y="222" width="332" height="27"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="Pqu-E4-nem">
                                     <font key="font" size="22" name="HelveticaNeue-Thin"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -166,7 +170,7 @@
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="14L-ty-8V1" firstAttribute="leading" secondItem="jBb-2a-idr" secondAttribute="leading" constant="2" id="3sc-3i-RYF"/>
+                            <constraint firstItem="14L-ty-8V1" firstAttribute="leading" secondItem="jBb-2a-idr" secondAttribute="leading" id="3sc-3i-RYF"/>
                             <constraint firstAttribute="trailing" secondItem="Mai-NF-7SZ" secondAttribute="trailing" id="4jc-re-ufd"/>
                             <constraint firstItem="TmW-xh-BIy" firstAttribute="bottom" secondItem="d1v-7U-eFh" secondAttribute="bottom" id="9WD-aT-Q2L"/>
                             <constraint firstItem="Mai-NF-7SZ" firstAttribute="leading" secondItem="pAY-dC-RMX" secondAttribute="leading" id="A84-rp-KXB"/>
@@ -180,27 +184,26 @@
                             <constraint firstAttribute="bottom" secondItem="d1v-7U-eFh" secondAttribute="bottom" constant="20" symbolic="YES" id="dd9-Iy-anL"/>
                             <constraint firstItem="14L-ty-8V1" firstAttribute="leading" secondItem="KPY-md-Kp1" secondAttribute="leading" id="him-ll-o8T"/>
                             <constraint firstItem="d1v-7U-eFh" firstAttribute="leading" secondItem="pAY-dC-RMX" secondAttribute="leading" constant="20" symbolic="YES" id="hzj-3K-pWY"/>
-                            <constraint firstItem="jBb-2a-idr" firstAttribute="leading" secondItem="d1v-7U-eFh" secondAttribute="trailing" constant="8" symbolic="YES" id="mMw-RA-9f4"/>
                             <constraint firstItem="Mai-NF-7SZ" firstAttribute="top" secondItem="pAY-dC-RMX" secondAttribute="top" id="nQf-z4-mhf"/>
                             <constraint firstItem="KPY-md-Kp1" firstAttribute="trailing" secondItem="14L-ty-8V1" secondAttribute="trailing" id="oeG-d5-pqm"/>
                             <constraint firstItem="TmW-xh-BIy" firstAttribute="top" secondItem="KPY-md-Kp1" secondAttribute="bottom" constant="16" id="qAV-bF-KGg"/>
-                            <constraint firstAttribute="trailing" secondItem="jBb-2a-idr" secondAttribute="trailing" constant="22" id="r8g-Hl-Gpe"/>
+                            <constraint firstAttribute="trailing" secondItem="jBb-2a-idr" secondAttribute="trailing" constant="20" symbolic="YES" id="r8g-Hl-Gpe"/>
                             <constraint firstItem="KPY-md-Kp1" firstAttribute="top" secondItem="14L-ty-8V1" secondAttribute="bottom" constant="8" symbolic="YES" id="u5P-vH-Oyp"/>
                         </constraints>
                     </customView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="pAY-dC-RMX" firstAttribute="top" secondItem="2" secondAttribute="top" id="Hi1-jq-fXt"/>
-                    <constraint firstAttribute="trailing" secondItem="KpE-Xt-NXa" secondAttribute="trailing" constant="20" id="O7e-Ce-07Z"/>
+                    <constraint firstAttribute="trailing" secondItem="KpE-Xt-NXa" secondAttribute="trailing" constant="20" symbolic="YES" id="O7e-Ce-07Z"/>
                     <constraint firstAttribute="bottom" secondItem="KpE-Xt-NXa" secondAttribute="bottom" constant="15" id="VLU-Ce-sJa"/>
                     <constraint firstItem="IWS-wC-pcR" firstAttribute="centerY" secondItem="KpE-Xt-NXa" secondAttribute="centerY" id="YRg-DU-lTv"/>
-                    <constraint firstItem="KpE-Xt-NXa" firstAttribute="leading" secondItem="IWS-wC-pcR" secondAttribute="trailing" constant="8" id="dYK-cO-LLE"/>
                     <constraint firstItem="KpE-Xt-NXa" firstAttribute="top" secondItem="pAY-dC-RMX" secondAttribute="bottom" constant="15" id="kOT-rr-hhi"/>
                     <constraint firstItem="pAY-dC-RMX" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="nKL-xr-mBc"/>
+                    <constraint firstAttribute="centerX" secondItem="IWS-wC-pcR" secondAttribute="centerX" id="pkz-Lu-q1P"/>
                     <constraint firstAttribute="trailing" secondItem="pAY-dC-RMX" secondAttribute="trailing" constant="-2" id="yb8-5M-iIQ"/>
                 </constraints>
             </view>
-            <point key="canvasLocation" x="349" y="382"/>
+            <point key="canvasLocation" x="-118" y="567"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="Pum-Qq-5Gi"/>
     </objects>
