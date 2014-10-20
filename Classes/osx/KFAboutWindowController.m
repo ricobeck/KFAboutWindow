@@ -145,6 +145,7 @@ typedef NS_ENUM(NSUInteger, KFAboutDisplayMode)
 {
     self.topContentView.layer.backgroundColor = [backgroundColor CGColor];
     self.scrollTextView.backgroundColor = backgroundColor;
+    self.scrollView.gradientColor = backgroundColor;
 }
 
 

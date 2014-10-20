@@ -9,6 +9,7 @@
 @interface KFGradientScrollView : NSScrollView
 @property (assign, nonatomic) BOOL hasTopGradient;
 @property (assign, nonatomic) BOOL hasBottomGradient;
+@property (strong, nonatomic) NSColor *gradientColor;
 @property (assign) CGFloat gradientHeight;
 
 - (void)showGradients;

@@ -68,6 +68,17 @@ static const CGFloat kKFShadowHeightDefaultValue = 23.0;
     }
 }
 
+- (void)setGradientColor:(NSColor *)gradientColor {
+    if (self.topShadowView) {
+        self.topShadowView.gradientColor = gradientColor;
+    }
+    if (self.bottomShadowView) {
+        self.bottomShadowView.gradientColor = gradientColor;
+    }
+}
+
+#pragma mark - API
+
 - (void)showGradients {
     self.topShadowView.hidden = NO;
     self.bottomShadowView.hidden = NO;
