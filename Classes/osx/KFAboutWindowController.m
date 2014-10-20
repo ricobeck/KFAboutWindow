@@ -22,37 +22,22 @@ typedef NS_ENUM(NSUInteger, KFAboutDisplayMode)
 
 
 @interface KFAboutWindowController ()
-
 @property (weak) IBOutlet NSView *topContentView;
-
 @property (weak) IBOutlet NSImageView *backgroundImageView;
-
 @property (weak) IBOutlet NSImageView *appIconImageView;
-
 @property (weak) IBOutlet NSTextField *bundleNameLabel;
-
 @property (weak) IBOutlet NSTextField *versionLabel;
-
 @property (weak) IBOutlet NSTextField *humanReadableCopyrightLabel;
 
-
 @property (unsafe_unretained) IBOutlet KFAutoScrollTextView *scrollTextView;
-
 @property (weak) IBOutlet NSButton *toggleDisplayButton;
-
 @property (weak) IBOutlet NSButton *visitWebsiteButton;
 
-
 @property (nonatomic, copy) NSAttributedString *attributedString;
-
 @property (nonatomic) KFAboutDisplayMode displayMode;
-
 @property (nonatomic, copy) NSString *toggleButtonText;
-
 @property (nonatomic) NSNumber *disabledOption;
-
 @property (nonatomic) NSNumber *canToggleScroll;
-
 @end
 
 
