@@ -69,7 +69,9 @@ static const unsigned short KFEscapeKeyCode = 53;
 - (void)windowDidLoad
 {
     [super windowDidLoad];
-    
+
+    [self applyStyle:[KFAboutWindowController defaultStyleModel]];
+
     [self.topContentView setWantsLayer:YES];
     self.topContentView.layer.backgroundColor = [[NSColor whiteColor] CGColor];
     
@@ -148,6 +150,10 @@ static const unsigned short KFEscapeKeyCode = 53;
     self.scrollView.gradientColor = backgroundColor;
 }
 
++ (KFAboutWindowStyleModel *)defaultStyleModel {
+    KFAboutWindowStyleModel *defaultStyleModel = [[KFAboutWindowStyleModel alloc] init];
+    return defaultStyleModel;
+}
 
 - (void)applyStyle:(KFAboutWindowStyleModel *)styleModel
 {
@@ -177,7 +183,15 @@ static const unsigned short KFEscapeKeyCode = 53;
     {
         [self.humanReadableCopyrightLabel setTextColor:styleModel.humanReadableCopyrightsColor];
     }
-    
+    if (styleModel.bundleNameLabelFont) {
+        self.bundleNameLabel.font = styleModel.bundleNameLabelFont;
+    }
+    if (styleModel.versionLabelFont) {
+        self.versionLabel.font = styleModel.versionLabelFont;
+    }
+    if (styleModel.humanReadableCopyrightLabelFont) {
+        self.humanReadableCopyrightLabel.font = styleModel.humanReadableCopyrightLabelFont;
+    }
 }
 
 #pragma mark - Window show/hide

@@ -10,18 +10,15 @@
 
 @interface KFAboutWindowStyleModel : NSObject
 
-
 @property (nonatomic, strong) NSColor *backgroundColor;
-
 @property (nonatomic, strong) NSImage *backgroundImage;
-
 @property (nonatomic, strong) NSColor *bundleNameColor;
-
 @property (nonatomic, strong) NSColor *versionColor;
-
 @property (nonatomic, strong) NSColor *acknowlegdementsTextColor;
-
 @property (nonatomic, strong) NSColor *humanReadableCopyrightsColor;
 
+@property (nonatomic, strong) NSFont *bundleNameLabelFont;
+@property (nonatomic, strong) NSFont *versionLabelFont;
+@property (nonatomic, strong) NSFont *humanReadableCopyrightLabelFont;
 
 @end
