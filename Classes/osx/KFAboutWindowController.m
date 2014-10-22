@@ -229,6 +229,7 @@ static const unsigned short KFEscapeKeyCode = 53;
     self.eventMonitor = [NSEvent addLocalMonitorForEventsMatchingMask:NSKeyDownMask handler:^NSEvent *(NSEvent *event) {
         if (event.keyCode == KFEscapeKeyCode) {
             [wSelf.window performClose:wSelf];
+            return nil;
         }
         return event;
     }];
