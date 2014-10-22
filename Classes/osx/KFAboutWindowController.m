@@ -15,11 +15,12 @@
 #import <QuartzCore/QuartzCore.h>
 
 
-typedef NS_ENUM(NSUInteger, KFAboutDisplayMode)
-{
+typedef NS_ENUM(NSUInteger, KFAboutDisplayMode) {
     KFAboutDisplayModeCredits,
     KFAboutDisplayModeAcknowledgements
 };
+
+static const unsigned short KFEscapeKeyCode = 53;
 
 
 @interface KFAboutWindowController ()
@@ -42,6 +43,8 @@ typedef NS_ENUM(NSUInteger, KFAboutDisplayMode)
 @property (nonatomic) NSNumber *disabledOption;
 @property (nonatomic) NSNumber *canToggleScroll;
 
+@property (strong) id eventMonitor;
+
 @end
 
 
@@ -49,19 +52,15 @@ typedef NS_ENUM(NSUInteger, KFAboutDisplayMode)
 @implementation KFAboutWindowController
 
 
-+ (NSString *)nibName
-{
-    return @"KFAboutWindow";
-}
++ (NSString *)nibName { return @"KFAboutWindow"; }
 
-
-- (id)init
-{
+- (id)init {
     self = [super initWithWindowNibName:[[self class] nibName]];
-    if (self)
-    {
+    if (self) {
         [self.window setTitle:@""];
         _disabledOption = @NO;
+
+        [self setupEventMonitor];
     }
     return self;
 }
@@ -74,12 +73,13 @@ typedef NS_ENUM(NSUInteger, KFAboutDisplayMode)
     [self.topContentView setWantsLayer:YES];
     self.topContentView.layer.backgroundColor = [[NSColor whiteColor] CGColor];
     
-    CALayer *borderLayer = [CALayer layer];
+    CALayer *borderLayer    = [CALayer layer];
     borderLayer.borderColor = [NSColor disabledControlTextColor].CGColor;
     borderLayer.borderWidth = 1;
-    CGRect borderRect = CGRectInset(self.topContentView.layer.bounds, -2, -1);
+
+    CGRect borderRect   = CGRectInset(self.topContentView.layer.bounds, -2, -1);
     borderRect.origin.y += 1;
-    borderLayer.frame = borderRect;
+    borderLayer.frame   = borderRect;
     [self.topContentView.layer addSublayer:borderLayer];
 
     NSTextContainer *container = [self.scrollTextView textContainer];
@@ -220,6 +220,18 @@ typedef NS_ENUM(NSUInteger, KFAboutDisplayMode)
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NSWindowDidResignKeyNotification object:self];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NSWindowDidResignMainNotification object:self];
+}
+
+#pragma mark - Keystroke Handling
+
+- (void)setupEventMonitor {
+    __weak typeof(self) wSelf = self;
+    self.eventMonitor = [NSEvent addLocalMonitorForEventsMatchingMask:NSKeyDownMask handler:^NSEvent *(NSEvent *event) {
+        if (event.keyCode == KFEscapeKeyCode) {
+            [wSelf.window performClose:wSelf];
+        }
+        return event;
+    }];
 }
 
 
