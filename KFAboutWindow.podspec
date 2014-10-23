@@ -12,15 +12,15 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/ricobeck/KFAboutWindow.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/ricobeck'
 
-  s.osx.deployment_target = '10.8'
+  s.osx.deployment_target = '10.9'
   s.requires_arc = true
 
-  s.osx.source_files = 'Classes/**/*'
-  s.osx.resources = 'Assets/osx/*'
+  s.osx.source_files = 'KFAboutWindow/Classes/**/*'
+  s.osx.resources = 'KFAboutWindow/Assets/osx/*'
 
-  s.ios.exclude_files = 'Classes/osx'
-  s.osx.exclude_files = 'Classes/ios'
+  s.ios.exclude_files = 'KFAboutWindow/Classes/osx'
+  s.osx.exclude_files = 'KFAboutWindow/Classes/ios'
 
-  s.public_header_files = 'Classes/**/*.h'
+  s.public_header_files = 'KFAboutWindow/Classes/**/*.h'
   s.frameworks = 'QuartzCore'
 end

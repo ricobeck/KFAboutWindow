@@ -7,10 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-
-@class KFAboutWindowStyleModel;
-
+#import "KFAboutWindowStyleModel.h"
 
 @interface KFAboutWindowController : NSWindowController
 
