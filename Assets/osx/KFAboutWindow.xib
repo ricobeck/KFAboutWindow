@@ -8,12 +8,12 @@
             <connections>
                 <outlet property="appIconImageView" destination="d1v-7U-eFh" id="YP7-JS-YLJ"/>
                 <outlet property="backgroundImageView" destination="Mai-NF-7SZ" id="10m-Jv-EuA"/>
+                <outlet property="backgroundView" destination="pAY-dC-RMX" id="UHh-p1-Hvf"/>
                 <outlet property="bundleNameLabel" destination="jBb-2a-idr" id="r72-EN-fwg"/>
                 <outlet property="humanReadableCopyrightLabel" destination="TmW-xh-BIy" id="kl6-l6-ZPf"/>
                 <outlet property="scrollTextView" destination="s7r-p9-WmY" id="whF-h1-EN1"/>
                 <outlet property="scrollView" destination="KPY-md-Kp1" id="HbR-LL-f7a"/>
                 <outlet property="toggleDisplayButton" destination="KpE-Xt-NXa" id="3qa-z1-E95"/>
-                <outlet property="topContentView" destination="pAY-dC-RMX" id="YE8-D2-u2w"/>
                 <outlet property="versionLabel" destination="14L-ty-8V1" id="kzk-iM-x91"/>
                 <outlet property="visitWebsiteButton" destination="IWS-wC-pcR" id="q1g-Iz-vi1"/>
                 <outlet property="window" destination="1" id="RK2-aX-Pyc"/>
@@ -29,45 +29,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="560" height="320"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IWS-wC-pcR">
-                        <rect key="frame" x="174" y="8" width="213" height="32"/>
-                        <buttonCell key="cell" type="push" title="Visit BundleName's Website" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eik-H8-4NU">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="visitWebsiteAction:" target="-2" id="m2z-LK-8Iy"/>
-                            <binding destination="-2" name="title" keyPath="self.bundleName" id="t2q-qt-7bS">
-                                <dictionary key="options">
-                                    <string key="NSValueTransformerName">KFWebsiteButtonBundleNameTransformer</string>
-                                </dictionary>
-                            </binding>
-                            <binding destination="-2" name="hidden" keyPath="self.websiteURL" id="Mk7-pS-MwO">
-                                <dictionary key="options">
-                                    <string key="NSValueTransformerName">NSIsNil</string>
-                                </dictionary>
-                            </binding>
-                        </connections>
-                    </button>
-                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KpE-Xt-NXa">
-                        <rect key="frame" x="383" y="8" width="163" height="32"/>
-                        <constraints>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="151" id="mQQ-Vm-Rhv"/>
-                        </constraints>
-                        <buttonCell key="cell" type="push" title="Acknowledgements" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oGf-Ti-3qh">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="toggleScrollTextContent:" target="-2" id="wfs-Rl-FsE"/>
-                            <binding destination="-2" name="hidden" keyPath="self.acknowledgements" id="ISF-n9-hvo">
-                                <dictionary key="options">
-                                    <string key="NSValueTransformerName">NSIsNil</string>
-                                </dictionary>
-                            </binding>
-                            <binding destination="-2" name="title" keyPath="self.toggleButtonText" id="JQ4-6v-TlA"/>
-                        </connections>
-                    </button>
                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="pAY-dC-RMX">
                         <rect key="frame" x="0.0" y="51" width="562" height="269"/>
                         <subviews>
@@ -90,7 +51,7 @@
                                             <attributedString key="textStorage">
                                                 <fragment content="Text">
                                                     <attributes>
-                                                        <font key="NSFont" metaFont="controlContent" size="11"/>
+                                                        <font key="NSFont" metaFont="smallSystem"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                     </attributes>
                                                 </fragment>
@@ -191,19 +152,60 @@
                             <constraint firstItem="KPY-md-Kp1" firstAttribute="top" secondItem="14L-ty-8V1" secondAttribute="bottom" constant="8" symbolic="YES" id="u5P-vH-Oyp"/>
                         </constraints>
                     </customView>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KpE-Xt-NXa">
+                        <rect key="frame" x="415" y="9" width="130" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="EA8-Yf-pEA"/>
+                        </constraints>
+                        <buttonCell key="cell" type="push" title="Acknowledgements" bezelStyle="rounded" alignment="center" controlSize="small" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oGf-Ti-3qh">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggleScrollTextContent:" target="-2" id="wfs-Rl-FsE"/>
+                            <binding destination="-2" name="hidden" keyPath="self.acknowledgements" id="ISF-n9-hvo">
+                                <dictionary key="options">
+                                    <string key="NSValueTransformerName">NSIsNil</string>
+                                </dictionary>
+                            </binding>
+                            <binding destination="-2" name="title" keyPath="self.toggleButtonText" id="JQ4-6v-TlA"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IWS-wC-pcR">
+                        <rect key="frame" x="242" y="9" width="175" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="jvZ-uW-Q86"/>
+                        </constraints>
+                        <buttonCell key="cell" type="push" title="Visit BundleName's Website" bezelStyle="rounded" alignment="center" controlSize="small" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eik-H8-4NU">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="visitWebsiteAction:" target="-2" id="m2z-LK-8Iy"/>
+                            <binding destination="-2" name="title" keyPath="self.bundleName" id="t2q-qt-7bS">
+                                <dictionary key="options">
+                                    <string key="NSValueTransformerName">KFWebsiteButtonBundleNameTransformer</string>
+                                </dictionary>
+                            </binding>
+                            <binding destination="-2" name="hidden" keyPath="self.websiteURL" id="Mk7-pS-MwO">
+                                <dictionary key="options">
+                                    <string key="NSValueTransformerName">NSIsNil</string>
+                                </dictionary>
+                            </binding>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="pAY-dC-RMX" firstAttribute="top" secondItem="2" secondAttribute="top" id="Hi1-jq-fXt"/>
                     <constraint firstAttribute="trailing" secondItem="KpE-Xt-NXa" secondAttribute="trailing" constant="20" symbolic="YES" id="O7e-Ce-07Z"/>
+                    <constraint firstAttribute="bottom" secondItem="IWS-wC-pcR" secondAttribute="bottom" constant="15" id="R0B-lI-XWC"/>
                     <constraint firstAttribute="bottom" secondItem="KpE-Xt-NXa" secondAttribute="bottom" constant="15" id="VLU-Ce-sJa"/>
-                    <constraint firstItem="IWS-wC-pcR" firstAttribute="centerY" secondItem="KpE-Xt-NXa" secondAttribute="centerY" id="YRg-DU-lTv"/>
-                    <constraint firstItem="KpE-Xt-NXa" firstAttribute="top" secondItem="pAY-dC-RMX" secondAttribute="bottom" constant="15" id="kOT-rr-hhi"/>
                     <constraint firstItem="pAY-dC-RMX" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="nKL-xr-mBc"/>
-                    <constraint firstAttribute="centerX" secondItem="IWS-wC-pcR" secondAttribute="centerX" id="pkz-Lu-q1P"/>
+                    <constraint firstItem="KpE-Xt-NXa" firstAttribute="leading" secondItem="IWS-wC-pcR" secondAttribute="trailing" constant="8" symbolic="YES" id="oNv-97-7vt"/>
                     <constraint firstAttribute="trailing" secondItem="pAY-dC-RMX" secondAttribute="trailing" constant="-2" id="yb8-5M-iIQ"/>
                 </constraints>
             </view>
-            <point key="canvasLocation" x="-118" y="567"/>
+            <point key="canvasLocation" x="-858" y="411"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="Pum-Qq-5Gi"/>
     </objects>

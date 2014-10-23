@@ -9,27 +9,30 @@
 #import "KFAboutWindowStyleModel.h"
 
 
-static NSFont *KFBundleNameLabelDefaultFont;
-static NSFont *KFVersionLabelDefaultFont;
-static NSFont *KFHumanReadableCopyrightLabelDefaultFont;
-
-
 @implementation KFAboutWindowStyleModel
 
-+ (void)initialize {
-    KFBundleNameLabelDefaultFont = [NSFont boldSystemFontOfSize:22.0];
-    KFVersionLabelDefaultFont = [NSFont boldSystemFontOfSize:11.0];
-    KFHumanReadableCopyrightLabelDefaultFont = [NSFont systemFontOfSize:11.0];
-}
++ (KFAboutWindowStyleModel *)defaultStyle {
+    KFAboutWindowStyleModel *defaultStyle = [[KFAboutWindowStyleModel alloc] init];
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        _bundleNameLabelFont = KFBundleNameLabelDefaultFont;
-        _versionLabelFont = KFVersionLabelDefaultFont;
-        _humanReadableCopyrightLabelFont = KFHumanReadableCopyrightLabelDefaultFont;
-    }
-    return self;
+    // content background
+    defaultStyle.backgroundColor                  = [NSColor whiteColor];
+    defaultStyle.backgroundSeparatorColor         = [NSColor gridColor];
+    defaultStyle.backgroundImage                  = nil;
+
+    // text labels
+    defaultStyle.bundleNameLabelColor             = [NSColor controlTextColor];
+    defaultStyle.versionLabelColor                = [NSColor disabledControlTextColor];
+    defaultStyle.humanReadableCopyrightLabelColor = [NSColor disabledControlTextColor];
+
+    // scrolling textView
+    defaultStyle.acknowledgementsTextColor        = [NSColor textColor];
+
+    // fonts
+    defaultStyle.bundleNameLabelFont              = [NSFont boldSystemFontOfSize:22.0];
+    defaultStyle.versionLabelFont                 = [NSFont boldSystemFontOfSize:11.0];
+    defaultStyle.humanReadableCopyrightLabelFont  = [NSFont systemFontOfSize:11.0];
+
+    return defaultStyle;
 }
 
 @end

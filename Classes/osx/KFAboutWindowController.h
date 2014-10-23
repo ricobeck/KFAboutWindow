@@ -22,10 +22,6 @@
 @property (nonatomic, copy) NSAttributedString *credits;
 @property (nonatomic, copy) NSAttributedString *acknowledgements;
 
-+ (KFAboutWindowStyleModel *)defaultStyleModel;
-
-- (void)setBackgroundImage:(NSImage *)backgroundImage;
-- (void)setBackgroundColor:(NSColor *)backgroundColor;
 - (void)applyStyle:(KFAboutWindowStyleModel *)styleModel;
 
 @end
