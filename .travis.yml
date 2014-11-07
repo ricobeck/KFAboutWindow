@@ -1,0 +1,3 @@
+language: objective-c
+xcode_project: Project/KFAboutWindowPreview.xcodeproj
+xcode_scheme: KFAboutWindowPreview

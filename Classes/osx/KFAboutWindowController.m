@@ -10,48 +10,41 @@
 #import "NSAttributedString+CocoaPods.h"
 #import "KFAutoScrollTextView.h"
 #import "KFAboutWindowStyleModel.h"
+#import "KFGradientScrollView.h"
 
 #import <QuartzCore/QuartzCore.h>
 
 
-typedef NS_ENUM(NSUInteger, KFAboutDisplayMode)
-{
+typedef NS_ENUM(NSUInteger, KFAboutDisplayMode) {
     KFAboutDisplayModeCredits,
     KFAboutDisplayModeAcknowledgements
 };
 
+static const unsigned short KFEscapeKeyCode = 53;
+
 
 @interface KFAboutWindowController ()
+@property (weak, nonatomic) IBOutlet NSView *backgroundView;
+@property (strong) CALayer *backgroundViewSeparator;
+@property (weak, nonatomic) IBOutlet NSImageView *backgroundImageView;
+@property (weak, nonatomic) IBOutlet NSImageView *appIconImageView;
+@property (weak, nonatomic) IBOutlet NSTextField *bundleNameLabel;
+@property (weak, nonatomic) IBOutlet NSTextField *versionLabel;
+@property (weak, nonatomic) IBOutlet NSTextField *humanReadableCopyrightLabel;
 
-@property (weak) IBOutlet NSView *topContentView;
-
-@property (weak) IBOutlet NSImageView *backgroundImageView;
-
-@property (weak) IBOutlet NSImageView *appIconImageView;
-
-@property (weak) IBOutlet NSTextField *bundleNameLabel;
-
-@property (weak) IBOutlet NSTextField *versionLabel;
-
-@property (weak) IBOutlet NSTextField *humanReadableCopyrightLabel;
-
-
+@property (weak) IBOutlet KFGradientScrollView *scrollView;
 @property (unsafe_unretained) IBOutlet KFAutoScrollTextView *scrollTextView;
 
 @property (weak) IBOutlet NSButton *toggleDisplayButton;
-
 @property (weak) IBOutlet NSButton *visitWebsiteButton;
 
-
 @property (nonatomic, copy) NSAttributedString *attributedString;
-
 @property (nonatomic) KFAboutDisplayMode displayMode;
-
 @property (nonatomic, copy) NSString *toggleButtonText;
-
 @property (nonatomic) NSNumber *disabledOption;
-
 @property (nonatomic) NSNumber *canToggleScroll;
+
+@property (strong) id eventMonitor;
 
 @end
 
@@ -60,19 +53,15 @@ typedef NS_ENUM(NSUInteger, KFAboutDisplayMode)
 @implementation KFAboutWindowController
 
 
-+ (NSString *)nibName
-{
-    return @"KFAboutWindow";
-}
++ (NSString *)nibName { return @"KFAboutWindow"; }
 
-
-- (id)init
-{
+- (id)init {
     self = [super initWithWindowNibName:[[self class] nibName]];
-    if (self)
-    {
+    if (self) {
         [self.window setTitle:@""];
         _disabledOption = @NO;
+
+        [self setupEventMonitor];
     }
     return self;
 }
@@ -81,26 +70,24 @@ typedef NS_ENUM(NSUInteger, KFAboutDisplayMode)
 - (void)windowDidLoad
 {
     [super windowDidLoad];
-    
-    [self.topContentView setWantsLayer:YES];
-    self.topContentView.layer.backgroundColor = [[NSColor whiteColor] CGColor];
-    
-    CALayer *borderLayer = [CALayer layer];
-    borderLayer.borderColor = [NSColor disabledControlTextColor].CGColor;
-    borderLayer.borderWidth = 1;
-    CGRect borderRect = CGRectInset(self.topContentView.layer.bounds, -2, -1);
+
+    [self.backgroundView setWantsLayer:YES];
+
+    self.backgroundViewSeparator = [CALayer layer];
+    self.backgroundViewSeparator.borderWidth = 1;
+    CGRect borderRect = CGRectInset(self.backgroundView.layer.bounds, -2, -1);
     borderRect.origin.y += 1;
-    borderLayer.frame = borderRect;
-    [self.topContentView.layer addSublayer:borderLayer];
-    
+    self.backgroundViewSeparator.frame = borderRect;
+    [self.backgroundView.layer addSublayer:self.backgroundViewSeparator];
+
     NSTextContainer *container = [self.scrollTextView textContainer];
     [container setLineFragmentPadding:0];
     
     NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
     
-    self.bundleName = info[@"CFBundleName"];
-    self.bundleShortVersion = info[@"CFBundleShortVersionString"];
-    self.bundleVersion = info[@"CFBundleVersion"];
+    self.bundleName             = info[@"CFBundleName"];
+    self.bundleShortVersion     = info[@"CFBundleShortVersionString"];
+    self.bundleVersion          = info[@"CFBundleVersion"];
     self.humanReadableCopyright = info[@"NSHumanReadableCopyright"];
     
     NSString *creditsPath = [[NSBundle mainBundle] pathForResource:@"Credits" ofType:@"rtf"];
@@ -120,6 +107,9 @@ typedef NS_ENUM(NSUInteger, KFAboutDisplayMode)
     
     self.displayMode = KFAboutDisplayModeCredits;
     [self updateModeValues];
+
+    KFAboutWindowStyleModel *defaultStyle = [KFAboutWindowStyleModel defaultStyle];
+    [self applyStyle:defaultStyle];
 }
 
 
@@ -154,10 +144,14 @@ typedef NS_ENUM(NSUInteger, KFAboutDisplayMode)
 
 - (void)setBackgroundColor:(NSColor *)backgroundColor
 {
-    self.topContentView.layer.backgroundColor = [backgroundColor CGColor];
+    self.backgroundView.layer.backgroundColor = [backgroundColor CGColor];
     self.scrollTextView.backgroundColor = backgroundColor;
+    self.scrollView.gradientColor = backgroundColor;
 }
 
+- (void)setBackgroundSeparatorColor:(NSColor *)separatorColor {
+    self.backgroundViewSeparator.borderColor = separatorColor.CGColor;
+}
 
 - (void)applyStyle:(KFAboutWindowStyleModel *)styleModel
 {
@@ -169,25 +163,37 @@ typedef NS_ENUM(NSUInteger, KFAboutDisplayMode)
     {
         [self setBackgroundColor:styleModel.backgroundColor];
     }
-    if (styleModel.bundleNameColor != nil)
+    if (styleModel.backgroundSeparatorColor)
     {
-        [self.bundleNameLabel setTextColor:styleModel.bundleNameColor];
+        [self setBackgroundSeparatorColor:styleModel.backgroundSeparatorColor];
     }
-    if (styleModel.versionColor != nil)
+    if (styleModel.bundleNameLabelColor != nil)
     {
-        [self.versionLabel setTextColor:styleModel.versionColor];
+        [self.bundleNameLabel setTextColor:styleModel.bundleNameLabelColor];
     }
-    if (styleModel.acknowlegdementsTextColor != nil)
+    if (styleModel.versionLabelColor != nil)
+    {
+        [self.versionLabel setTextColor:styleModel.versionLabelColor];
+    }
+    if (styleModel.acknowledgementsTextColor != nil)
     {
         NSMutableAttributedString *styledAcknowledgements = [self.acknowledgements mutableCopy];
-        [styledAcknowledgements setAttributes:@{NSForegroundColorAttributeName:styleModel.acknowlegdementsTextColor} range:NSMakeRange(0, [self.acknowledgements length])];
+        [styledAcknowledgements setAttributes:@{NSForegroundColorAttributeName:styleModel.acknowledgementsTextColor} range:NSMakeRange(0, [self.acknowledgements length])];
         self.acknowledgements = [styledAcknowledgements copy];
     }
-    if (styleModel.humanReadableCopyrightsColor != nil)
+    if (styleModel.humanReadableCopyrightLabelColor != nil)
     {
-        [self.humanReadableCopyrightLabel setTextColor:styleModel.humanReadableCopyrightsColor];
+        [self.humanReadableCopyrightLabel setTextColor:styleModel.humanReadableCopyrightLabelColor];
     }
-    
+    if (styleModel.bundleNameLabelFont) {
+        self.bundleNameLabel.font = styleModel.bundleNameLabelFont;
+    }
+    if (styleModel.versionLabelFont) {
+        self.versionLabel.font = styleModel.versionLabelFont;
+    }
+    if (styleModel.humanReadableCopyrightLabelFont) {
+        self.humanReadableCopyrightLabel.font = styleModel.humanReadableCopyrightLabelFont;
+    }
 }
 
 #pragma mark - Window show/hide
@@ -230,6 +236,19 @@ typedef NS_ENUM(NSUInteger, KFAboutDisplayMode)
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NSWindowDidResignKeyNotification object:self];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NSWindowDidResignMainNotification object:self];
+}
+
+#pragma mark - Keystroke Handling
+
+- (void)setupEventMonitor {
+    __weak typeof(self) wSelf = self;
+    self.eventMonitor = [NSEvent addLocalMonitorForEventsMatchingMask:NSKeyDownMask handler:^NSEvent *(NSEvent *event) {
+        if (event.keyCode == KFEscapeKeyCode) {
+            [wSelf.window performClose:wSelf];
+            return nil;
+        }
+        return event;
+    }];
 }
 
 

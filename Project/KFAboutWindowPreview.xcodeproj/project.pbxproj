@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D6B15C918C9EAD3001A1BC3 /* KFAboutWindowStyleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B15C818C9EAD3001A1BC3 /* KFAboutWindowStyleModel.m */; };
-		1D6B15CA18C9EAD3001A1BC3 /* KFAboutWindowStyleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B15C818C9EAD3001A1BC3 /* KFAboutWindowStyleModel.m */; };
 		1D8FD4B818C7D7CD00D9A9FA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8FD4B718C7D7CD00D9A9FA /* Cocoa.framework */; };
 		1D8FD4C218C7D7CD00D9A9FA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D8FD4C018C7D7CD00D9A9FA /* InfoPlist.strings */; };
 		1D8FD4C418C7D7CD00D9A9FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8FD4C318C7D7CD00D9A9FA /* main.m */; };
@@ -20,16 +18,15 @@
 		1D8FD4D818C7D7CE00D9A9FA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8FD4B718C7D7CD00D9A9FA /* Cocoa.framework */; };
 		1D8FD4E018C7D7CE00D9A9FA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D8FD4DE18C7D7CE00D9A9FA /* InfoPlist.strings */; };
 		1D8FD4E218C7D7CE00D9A9FA /* KFAboutWindowPreviewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8FD4E118C7D7CE00D9A9FA /* KFAboutWindowPreviewTests.m */; };
-		1D8FD4F218C7DC0900D9A9FA /* KFAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8FD4F118C7DC0900D9A9FA /* KFAboutWindowController.m */; };
-		1DA9F25518C7DEEE001BAB97 /* KFAboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DA9F25418C7DEEE001BAB97 /* KFAboutWindow.xib */; };
 		1DA9F25718C887D0001BAB97 /* Acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DA9F25618C887D0001BAB97 /* Acknowledgements.plist */; };
-		1DA9F25A18C88FE6001BAB97 /* KFWebsiteButtonBundleNameTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA9F25918C88FE6001BAB97 /* KFWebsiteButtonBundleNameTransformer.m */; };
-		1DA9F25B18C88FE6001BAB97 /* KFWebsiteButtonBundleNameTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA9F25918C88FE6001BAB97 /* KFWebsiteButtonBundleNameTransformer.m */; };
 		1DA9F25D18C8A515001BAB97 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA9F25C18C8A515001BAB97 /* QuartzCore.framework */; };
-		1DA9F26018C8B7DB001BAB97 /* NSAttributedString+CocoaPods.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA9F25F18C8B7DB001BAB97 /* NSAttributedString+CocoaPods.m */; };
-		1DA9F26118C8B7DB001BAB97 /* NSAttributedString+CocoaPods.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DA9F25F18C8B7DB001BAB97 /* NSAttributedString+CocoaPods.m */; };
-		1DAE6BE618C9280B003AB960 /* KFAutoScrollTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAE6BE518C9280B003AB960 /* KFAutoScrollTextView.m */; };
-		1DAE6BE718C9280B003AB960 /* KFAutoScrollTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DAE6BE518C9280B003AB960 /* KFAutoScrollTextView.m */; };
+		FDEBCD6719F9AA8000540776 /* KFAboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDEBCD5819F9AA7F00540776 /* KFAboutWindow.xib */; };
+		FDEBCD6819F9AA8000540776 /* KFAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEBCD5C19F9AA7F00540776 /* KFAboutWindowController.m */; };
+		FDEBCD6919F9AA8000540776 /* KFAboutWindowStyleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEBCD5E19F9AA7F00540776 /* KFAboutWindowStyleModel.m */; };
+		FDEBCD6A19F9AA8000540776 /* KFAutoScrollTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEBCD6019F9AA7F00540776 /* KFAutoScrollTextView.m */; };
+		FDEBCD6B19F9AA8000540776 /* KFGradientScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEBCD6219F9AA8000540776 /* KFGradientScrollView.m */; };
+		FDEBCD6C19F9AA8000540776 /* KFWebsiteButtonBundleNameTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEBCD6419F9AA8000540776 /* KFWebsiteButtonBundleNameTransformer.m */; };
+		FDEBCD6D19F9AA8000540776 /* NSAttributedString+CocoaPods.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEBCD6619F9AA8000540776 /* NSAttributedString+CocoaPods.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1D6B15C718C9EAD3001A1BC3 /* KFAboutWindowStyleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KFAboutWindowStyleModel.h; path = ../../Classes/osx/KFAboutWindowStyleModel.h; sourceTree = "<group>"; };
-		1D6B15C818C9EAD3001A1BC3 /* KFAboutWindowStyleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KFAboutWindowStyleModel.m; path = ../../Classes/osx/KFAboutWindowStyleModel.m; sourceTree = "<group>"; };
 		1D8FD4B418C7D7CD00D9A9FA /* KFAboutWindowPreview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KFAboutWindowPreview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8FD4B718C7D7CD00D9A9FA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1D8FD4BA18C7D7CD00D9A9FA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -64,17 +59,21 @@
 		1D8FD4DD18C7D7CE00D9A9FA /* KFAboutWindowPreviewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KFAboutWindowPreviewTests-Info.plist"; sourceTree = "<group>"; };
 		1D8FD4DF18C7D7CE00D9A9FA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D8FD4E118C7D7CE00D9A9FA /* KFAboutWindowPreviewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KFAboutWindowPreviewTests.m; sourceTree = "<group>"; };
-		1D8FD4F018C7DC0900D9A9FA /* KFAboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KFAboutWindowController.h; path = ../../Classes/osx/KFAboutWindowController.h; sourceTree = "<group>"; };
-		1D8FD4F118C7DC0900D9A9FA /* KFAboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KFAboutWindowController.m; path = ../../Classes/osx/KFAboutWindowController.m; sourceTree = "<group>"; };
-		1DA9F25418C7DEEE001BAB97 /* KFAboutWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = KFAboutWindow.xib; path = ../../Assets/osx/KFAboutWindow.xib; sourceTree = "<group>"; };
 		1DA9F25618C887D0001BAB97 /* Acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Acknowledgements.plist; sourceTree = "<group>"; };
-		1DA9F25818C88FE6001BAB97 /* KFWebsiteButtonBundleNameTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KFWebsiteButtonBundleNameTransformer.h; path = ../../Classes/osx/KFWebsiteButtonBundleNameTransformer.h; sourceTree = "<group>"; };
-		1DA9F25918C88FE6001BAB97 /* KFWebsiteButtonBundleNameTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KFWebsiteButtonBundleNameTransformer.m; path = ../../Classes/osx/KFWebsiteButtonBundleNameTransformer.m; sourceTree = "<group>"; };
 		1DA9F25C18C8A515001BAB97 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		1DA9F25E18C8B7DB001BAB97 /* NSAttributedString+CocoaPods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+CocoaPods.h"; path = "../../Classes/osx/NSAttributedString+CocoaPods.h"; sourceTree = "<group>"; };
-		1DA9F25F18C8B7DB001BAB97 /* NSAttributedString+CocoaPods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+CocoaPods.m"; path = "../../Classes/osx/NSAttributedString+CocoaPods.m"; sourceTree = "<group>"; };
-		1DAE6BE418C9280B003AB960 /* KFAutoScrollTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KFAutoScrollTextView.h; path = ../../Classes/osx/KFAutoScrollTextView.h; sourceTree = "<group>"; };
-		1DAE6BE518C9280B003AB960 /* KFAutoScrollTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KFAutoScrollTextView.m; path = ../../Classes/osx/KFAutoScrollTextView.m; sourceTree = "<group>"; };
+		FDEBCD5819F9AA7F00540776 /* KFAboutWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFAboutWindow.xib; sourceTree = "<group>"; };
+		FDEBCD5B19F9AA7F00540776 /* KFAboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFAboutWindowController.h; sourceTree = "<group>"; };
+		FDEBCD5C19F9AA7F00540776 /* KFAboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFAboutWindowController.m; sourceTree = "<group>"; };
+		FDEBCD5D19F9AA7F00540776 /* KFAboutWindowStyleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFAboutWindowStyleModel.h; sourceTree = "<group>"; };
+		FDEBCD5E19F9AA7F00540776 /* KFAboutWindowStyleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFAboutWindowStyleModel.m; sourceTree = "<group>"; };
+		FDEBCD5F19F9AA7F00540776 /* KFAutoScrollTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFAutoScrollTextView.h; sourceTree = "<group>"; };
+		FDEBCD6019F9AA7F00540776 /* KFAutoScrollTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFAutoScrollTextView.m; sourceTree = "<group>"; };
+		FDEBCD6119F9AA8000540776 /* KFGradientScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFGradientScrollView.h; sourceTree = "<group>"; };
+		FDEBCD6219F9AA8000540776 /* KFGradientScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFGradientScrollView.m; sourceTree = "<group>"; };
+		FDEBCD6319F9AA8000540776 /* KFWebsiteButtonBundleNameTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFWebsiteButtonBundleNameTransformer.h; sourceTree = "<group>"; };
+		FDEBCD6419F9AA8000540776 /* KFWebsiteButtonBundleNameTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFWebsiteButtonBundleNameTransformer.m; sourceTree = "<group>"; };
+		FDEBCD6519F9AA8000540776 /* NSAttributedString+CocoaPods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CocoaPods.h"; sourceTree = "<group>"; };
+		FDEBCD6619F9AA8000540776 /* NSAttributedString+CocoaPods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CocoaPods.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,19 +143,10 @@
 			children = (
 				1D8FD4C918C7D7CD00D9A9FA /* KFAppDelegate.h */,
 				1D8FD4CA18C7D7CD00D9A9FA /* KFAppDelegate.m */,
-				1D8FD4F018C7DC0900D9A9FA /* KFAboutWindowController.h */,
-				1D8FD4F118C7DC0900D9A9FA /* KFAboutWindowController.m */,
-				1D6B15C718C9EAD3001A1BC3 /* KFAboutWindowStyleModel.h */,
-				1D6B15C818C9EAD3001A1BC3 /* KFAboutWindowStyleModel.m */,
-				1DA9F25818C88FE6001BAB97 /* KFWebsiteButtonBundleNameTransformer.h */,
-				1DA9F25918C88FE6001BAB97 /* KFWebsiteButtonBundleNameTransformer.m */,
-				1DA9F25E18C8B7DB001BAB97 /* NSAttributedString+CocoaPods.h */,
-				1DA9F25F18C8B7DB001BAB97 /* NSAttributedString+CocoaPods.m */,
-				1DAE6BE418C9280B003AB960 /* KFAutoScrollTextView.h */,
-				1DAE6BE518C9280B003AB960 /* KFAutoScrollTextView.m */,
 				1D8FD4CC18C7D7CD00D9A9FA /* MainMenu.xib */,
-				1DA9F25418C7DEEE001BAB97 /* KFAboutWindow.xib */,
 				1D8FD4CF18C7D7CD00D9A9FA /* Images.xcassets */,
+				FDEBCD5619F9AA7F00540776 /* Assets */,
+				FDEBCD5919F9AA7F00540776 /* Classes */,
 				1D8FD4BE18C7D7CD00D9A9FA /* Supporting Files */,
 			);
 			path = KFAboutWindowPreview;
@@ -191,6 +181,51 @@
 				1D8FD4DE18C7D7CE00D9A9FA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FDEBCD5619F9AA7F00540776 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				FDEBCD5719F9AA7F00540776 /* osx */,
+			);
+			name = Assets;
+			path = ../../Assets;
+			sourceTree = "<group>";
+		};
+		FDEBCD5719F9AA7F00540776 /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				FDEBCD5819F9AA7F00540776 /* KFAboutWindow.xib */,
+			);
+			path = osx;
+			sourceTree = "<group>";
+		};
+		FDEBCD5919F9AA7F00540776 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FDEBCD5A19F9AA7F00540776 /* osx */,
+			);
+			name = Classes;
+			path = ../../Classes;
+			sourceTree = "<group>";
+		};
+		FDEBCD5A19F9AA7F00540776 /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				FDEBCD5B19F9AA7F00540776 /* KFAboutWindowController.h */,
+				FDEBCD5C19F9AA7F00540776 /* KFAboutWindowController.m */,
+				FDEBCD5D19F9AA7F00540776 /* KFAboutWindowStyleModel.h */,
+				FDEBCD5E19F9AA7F00540776 /* KFAboutWindowStyleModel.m */,
+				FDEBCD5F19F9AA7F00540776 /* KFAutoScrollTextView.h */,
+				FDEBCD6019F9AA7F00540776 /* KFAutoScrollTextView.m */,
+				FDEBCD6119F9AA8000540776 /* KFGradientScrollView.h */,
+				FDEBCD6219F9AA8000540776 /* KFGradientScrollView.m */,
+				FDEBCD6319F9AA8000540776 /* KFWebsiteButtonBundleNameTransformer.h */,
+				FDEBCD6419F9AA8000540776 /* KFWebsiteButtonBundleNameTransformer.m */,
+				FDEBCD6519F9AA8000540776 /* NSAttributedString+CocoaPods.h */,
+				FDEBCD6619F9AA8000540776 /* NSAttributedString+CocoaPods.m */,
+			);
+			path = osx;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,8 +305,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DA9F25518C7DEEE001BAB97 /* KFAboutWindow.xib in Resources */,
 				1D8FD4C218C7D7CD00D9A9FA /* InfoPlist.strings in Resources */,
+				FDEBCD6719F9AA8000540776 /* KFAboutWindow.xib in Resources */,
 				1D8FD4D018C7D7CD00D9A9FA /* Images.xcassets in Resources */,
 				1DA9F25718C887D0001BAB97 /* Acknowledgements.plist in Resources */,
 				1D8FD4C818C7D7CD00D9A9FA /* Credits.rtf in Resources */,
@@ -294,13 +329,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D8FD4F218C7DC0900D9A9FA /* KFAboutWindowController.m in Sources */,
-				1DA9F26018C8B7DB001BAB97 /* NSAttributedString+CocoaPods.m in Sources */,
-				1D6B15C918C9EAD3001A1BC3 /* KFAboutWindowStyleModel.m in Sources */,
+				FDEBCD6A19F9AA8000540776 /* KFAutoScrollTextView.m in Sources */,
+				FDEBCD6819F9AA8000540776 /* KFAboutWindowController.m in Sources */,
 				1D8FD4C418C7D7CD00D9A9FA /* main.m in Sources */,
+				FDEBCD6919F9AA8000540776 /* KFAboutWindowStyleModel.m in Sources */,
+				FDEBCD6B19F9AA8000540776 /* KFGradientScrollView.m in Sources */,
 				1D8FD4CB18C7D7CD00D9A9FA /* KFAppDelegate.m in Sources */,
-				1DAE6BE618C9280B003AB960 /* KFAutoScrollTextView.m in Sources */,
-				1DA9F25A18C88FE6001BAB97 /* KFWebsiteButtonBundleNameTransformer.m in Sources */,
+				FDEBCD6C19F9AA8000540776 /* KFWebsiteButtonBundleNameTransformer.m in Sources */,
+				FDEBCD6D19F9AA8000540776 /* NSAttributedString+CocoaPods.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,10 +345,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D8FD4E218C7D7CE00D9A9FA /* KFAboutWindowPreviewTests.m in Sources */,
-				1DA9F26118C8B7DB001BAB97 /* NSAttributedString+CocoaPods.m in Sources */,
-				1D6B15CA18C9EAD3001A1BC3 /* KFAboutWindowStyleModel.m in Sources */,
-				1DAE6BE718C9280B003AB960 /* KFAutoScrollTextView.m in Sources */,
-				1DA9F25B18C88FE6001BAB97 /* KFWebsiteButtonBundleNameTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

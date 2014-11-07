@@ -12,10 +12,7 @@
 
 @property (nonatomic, getter = isAutoScrolling) BOOL autoScrolling;
 
-
 - (void)startScrolling;
-
 - (void)stopScrolling;
-
 
 @end

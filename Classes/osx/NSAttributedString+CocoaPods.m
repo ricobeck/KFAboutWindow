@@ -15,14 +15,14 @@
 
 + (instancetype)attributedStringWithCocoaPodsAcknowledgementsAtPath:(NSString *)acknowledgementsPath
 {
-    return [self attributedStringWithCocoaPodsAcknowledgementsAtPath:acknowledgementsPath foregroundColor:[NSColor blackColor]];
+    return [self attributedStringWithCocoaPodsAcknowledgementsAtPath:acknowledgementsPath foregroundColor:[ColorClassName blackColor]];
 }
 
 
-+ (instancetype)attributedStringWithCocoaPodsAcknowledgementsAtPath:(NSString *)acknowledgementsPath foregroundColor:(NSColor *)foregroundColor
++ (instancetype)attributedStringWithCocoaPodsAcknowledgementsAtPath:(NSString *)acknowledgementsPath foregroundColor:(ColorClassName *)foregroundColor
 {
-    NSDictionary *bodyTextattributes = @{NSForegroundColorAttributeName: foregroundColor, NSFontAttributeName : [NSFont systemFontOfSize:[NSFont smallSystemFontSize]]};
-    NSDictionary *headlineTextAttributes = @{NSForegroundColorAttributeName: foregroundColor, NSFontAttributeName : [NSFont boldSystemFontOfSize:[NSFont smallSystemFontSize]]};
+    NSDictionary *bodyTextattributes = @{NSForegroundColorAttributeName: foregroundColor, NSFontAttributeName : [FontClassName systemFontOfSize:[FontClassName smallSystemFontSize]]};
+    NSDictionary *headlineTextAttributes = @{NSForegroundColorAttributeName: foregroundColor, NSFontAttributeName : [FontClassName boldSystemFontOfSize:[FontClassName smallSystemFontSize]]};
     
     return [self attributedStringWithCocoaPodsAcknowledgementsAtPath:acknowledgementsPath headlineTextAttributes:headlineTextAttributes bodyTextAttributes:bodyTextattributes];
 }

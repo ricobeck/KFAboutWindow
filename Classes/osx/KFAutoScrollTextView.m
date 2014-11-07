@@ -7,85 +7,72 @@
 //
 
 #import "KFAutoScrollTextView.h"
+#import "KFGradientScrollView.h"
 
 @interface KFAutoScrollTextView ()
-
 @property (nonatomic, strong) NSTimer *scrollTimer;
-
 @property (nonatomic) CGFloat lineScroll;
-
 @property (nonatomic) CGFloat pageScroll;
-
 @property (nonatomic) BOOL hadVerticalScroller;
-
 @property (nonatomic) CGFloat currentScrollPosition;
-
 @property (nonatomic) CGFloat maxScrollPosition;
-
 @end
 
 
 @implementation KFAutoScrollTextView
 
 
-- (void)scrollWheel:(NSEvent *)theEvent
-{
-    if ([self isScrolling])
-    {
+- (void)scrollWheel:(NSEvent *)theEvent {
+    if ([self isScrolling])  {
         [self stopScrolling];
     }
     [super scrollWheel:theEvent];
 }
 
 
-- (void)mouseEntered:(NSEvent *)theEvent
-{
-    if ([self isScrolling])
-    {
+- (void)mouseEntered:(NSEvent *)theEvent {
+    if ([self isScrolling]) {
         [self stopScrolling];
     }
     [super mouseEntered:theEvent];
 }
 
 
-- (void)mouseExited:(NSEvent *)theEvent
-{
-    if (![self isScrolling] && self.isAutoScrolling)
-    {
-        [self performSelector:@selector(startScrolling) withObject:nil afterDelay:2.0];
+- (void)mouseExited:(NSEvent *)theEvent {
+    if (![self isScrolling] && self.isAutoScrolling) {
+        [self performSelector:@selector(startScrolling) withObject:nil afterDelay:1.0];
     }
     [super mouseExited:theEvent];
 }
 
 
-- (void)startScrolling
-{
-    if (![self isScrolling])
-    {
-        NSScrollView *scrollView = [self enclosingScrollView];
+- (void)startScrolling {
+    if (![self isScrolling]) {
+        KFGradientScrollView *scrollView = (KFGradientScrollView *)[self enclosingScrollView];
+        [scrollView showGradients];
+
         self.lineScroll = [scrollView lineScroll];
         self.pageScroll = [scrollView pageScroll];
         self.hadVerticalScroller = [scrollView hasVerticalScroller];
-        
+
         [scrollView setHasVerticalScroller:NO];
         [scrollView setLineScroll:0.0f];
         [scrollView setPageScroll:0.0f];
-        
+
         self.currentScrollPosition = [[scrollView contentView] bounds].origin.y;
-        self.maxScrollPosition = [[self textStorage] size].height;
-        self.scrollTimer = [NSTimer scheduledTimerWithTimeInterval:(1.0f / 30) target:self selector:@selector(updateScrollPosition:) userInfo:nil repeats:YES];
+        self.maxScrollPosition     = [[self textStorage] size].height;
+        self.scrollTimer           = [NSTimer scheduledTimerWithTimeInterval:(1.0f / 30) target:self selector:@selector(updateScrollPosition:) userInfo:nil repeats:YES];
     }
 }
 
 
-- (void)stopScrolling
-{
-    if ([self isScrolling])
-    {
+- (void)stopScrolling {
+    if ([self isScrolling]) {
         [self.scrollTimer invalidate];
         self.scrollTimer = nil;
-        
-        NSScrollView *scrollView = [self enclosingScrollView];
+
+        KFGradientScrollView *scrollView = (KFGradientScrollView *)[self enclosingScrollView];
+        [scrollView dismissGradients];
         [scrollView setHasVerticalScroller:self.hadVerticalScroller];
         [scrollView setLineScroll:self.lineScroll];
         [scrollView setPageScroll:self.pageScroll];
@@ -93,29 +80,24 @@
 }
 
 
-- (void)updateScrollPosition:(NSTimer *)timer
-{
+- (void)updateScrollPosition:(NSTimer *)timer {
     self.currentScrollPosition++;
-    if (self.currentScrollPosition > self.maxScrollPosition || self.currentScrollPosition < 0)
-    {
-		self.currentScrollPosition = 0;
+    if (self.currentScrollPosition > self.maxScrollPosition || self.currentScrollPosition < 0) {
+        self.currentScrollPosition = 0;
     }
-    
+
     [self scrollPoint:NSMakePoint(0, self.currentScrollPosition)];
 }
 
 
-- (BOOL)isScrolling
-{
+- (BOOL)isScrolling {
     return self.scrollTimer != nil && [self.scrollTimer isValid];
 }
 
 
-- (void)setAutoScrolling:(BOOL)autoScrolling
-{
+- (void)setAutoScrolling:(BOOL)autoScrolling {
     _autoScrolling = autoScrolling;
-    if (!_autoScrolling)
-    {
+    if (!_autoScrolling) {
         [self stopScrolling];
         [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(startScrolling) object:nil];
     }
