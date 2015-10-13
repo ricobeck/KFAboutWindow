@@ -38,9 +38,9 @@
 		1D998F841BCDA41C00D56F27 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D998F821BCDA41C00D56F27 /* MainMenu.xib */; };
 		1D998F891BCDA43200D56F27 /* KFAboutWindow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D998F5C1BCD90D500D56F27 /* KFAboutWindow.framework */; };
 		1D998F8A1BCDA43200D56F27 /* KFAboutWindow.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1D998F5C1BCD90D500D56F27 /* KFAboutWindow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1D998F8E1BCDA95600D56F27 /* KFAboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDEBCD5819F9AA7F00540776 /* KFAboutWindow.xib */; settings = {ASSET_TAGS = (); }; };
 		1DA9F25718C887D0001BAB97 /* Acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DA9F25618C887D0001BAB97 /* Acknowledgements.plist */; };
 		1DA9F25D18C8A515001BAB97 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA9F25C18C8A515001BAB97 /* QuartzCore.framework */; };
-		FDEBCD6719F9AA8000540776 /* KFAboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDEBCD5819F9AA7F00540776 /* KFAboutWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -472,7 +472,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D8FD4C218C7D7CD00D9A9FA /* InfoPlist.strings in Resources */,
-				FDEBCD6719F9AA8000540776 /* KFAboutWindow.xib in Resources */,
 				1D8FD4D018C7D7CD00D9A9FA /* Images.xcassets in Resources */,
 				1DA9F25718C887D0001BAB97 /* Acknowledgements.plist in Resources */,
 				1D8FD4C818C7D7CD00D9A9FA /* Credits.rtf in Resources */,
@@ -492,6 +491,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D998F8E1BCDA95600D56F27 /* KFAboutWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
