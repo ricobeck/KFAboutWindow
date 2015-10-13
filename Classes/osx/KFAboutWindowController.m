@@ -90,11 +90,11 @@ static const unsigned short KFEscapeKeyCode = 53;
     self.bundleVersion          = info[@"CFBundleVersion"];
     self.humanReadableCopyright = info[@"NSHumanReadableCopyright"];
     
-    NSString *creditsPath = [[NSBundle mainBundle] pathForResource:@"Credits" ofType:@"rtf"];
+    NSURL *creditsURL = [[NSBundle mainBundle] URLForResource:@"Credits" withExtension:@"rtf"];
     
-    if (creditsPath != nil)
+    if (creditsURL != nil)
     {
-        self.credits = [[NSAttributedString alloc] initWithPath:creditsPath documentAttributes:nil];
+        self.credits = [[NSAttributedString alloc] initWithURL:creditsURL options:[NSDictionary new] documentAttributes:nil error:nil];
     }
    
     NSString *acknowledgementsPath = [[NSBundle mainBundle] pathForResource:@"Acknowledgements" ofType:@"plist"];

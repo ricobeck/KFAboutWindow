@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 KF Interactive. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <Cocoa/Cocoa.h>
 
 @interface KFAboutWindowStyleModel : NSObject
 

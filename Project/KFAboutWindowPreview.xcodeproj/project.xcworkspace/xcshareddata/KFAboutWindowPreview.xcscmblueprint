@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C8303A5431C9171FF0540949C6B095A170B8DE2B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C8303A5431C9171FF0540949C6B095A170B8DE2B" : 0,
+    "982310E13E76901E4324C124A89637FCC19E0FEE" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A614F089-24B5-44E9-B1A2-77501E198601",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C8303A5431C9171FF0540949C6B095A170B8DE2B" : "KFAboutWindow\/",
+    "982310E13E76901E4324C124A89637FCC19E0FEE" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "KFAboutWindowPreview",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Project\/KFAboutWindowPreview.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/85.232.8.233:8022\/ost\/provision-buddy.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "982310E13E76901E4324C124A89637FCC19E0FEE"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ricobeck\/KFAboutWindow.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C8303A5431C9171FF0540949C6B095A170B8DE2B"
+    }
+  ]
+}
