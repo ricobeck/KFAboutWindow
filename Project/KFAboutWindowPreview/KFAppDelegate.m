@@ -7,9 +7,7 @@
 //
 
 #import "KFAppDelegate.h"
-
-#import "KFAboutWindowController.h"
-#import "KFAboutWindowStyleModel.h"
+#import <KFAboutWindow/KFAboutWindow.h>
 
 #define kShowCustomization NO
 
