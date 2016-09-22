@@ -22,6 +22,9 @@
 @property (nonatomic, strong) NSFont *versionLabelFont;
 @property (nonatomic, strong) NSFont *humanReadableCopyrightLabelFont;
 
+@property (nonatomic, strong) NSColor *visitWebsiteButtonColor;
+@property (nonatomic, strong) NSColor *toggleDisplayButtonColor;
+
 + (KFAboutWindowStyleModel *)defaultStyle;
 
 @end

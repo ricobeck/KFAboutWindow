@@ -36,6 +36,8 @@
             styleModel.versionLabelColor                = [NSColor blueColor];
             styleModel.humanReadableCopyrightLabelColor = [NSColor yellowColor];
             styleModel.bundleNameLabelFont              = [NSFont fontWithName:@"HelveticaNeue-Light" size:23];
+            styleModel.visitWebsiteButtonColor          = [NSColor colorWithCalibratedRed:0.55 green: 0.75 blue: 0.12 alpha: 1.0];
+            styleModel.toggleDisplayButtonColor         = [NSColor colorWithCalibratedRed:0.55 green: 0.75 blue: 0.12 alpha: 1.0];
             
             [self.aboutWindowController applyStyle:styleModel];
         }
