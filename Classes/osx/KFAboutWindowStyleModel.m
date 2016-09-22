@@ -32,6 +32,9 @@
     defaultStyle.versionLabelFont                 = [NSFont boldSystemFontOfSize:11.0];
     defaultStyle.humanReadableCopyrightLabelFont  = [NSFont systemFontOfSize:11.0];
 
+    defaultStyle.visitWebsiteButtonColor          = [NSColor blackColor];
+    defaultStyle.toggleDisplayButtonColor         = [NSColor blackColor];
+
     return defaultStyle;
 }
 

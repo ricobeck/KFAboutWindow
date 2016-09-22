@@ -21,26 +21,27 @@
 		1D998F5F1BCD90D500D56F27 /* KFAboutWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D998F5E1BCD90D500D56F27 /* KFAboutWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D998F631BCD90D500D56F27 /* KFAboutWindow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D998F5C1BCD90D500D56F27 /* KFAboutWindow.framework */; };
 		1D998F641BCD90D500D56F27 /* KFAboutWindow.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1D998F5C1BCD90D500D56F27 /* KFAboutWindow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1D998F691BCD910300D56F27 /* KFAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEBCD5C19F9AA7F00540776 /* KFAboutWindowController.m */; settings = {ASSET_TAGS = (); }; };
-		1D998F6A1BCD910300D56F27 /* KFAboutWindowStyleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEBCD5E19F9AA7F00540776 /* KFAboutWindowStyleModel.m */; settings = {ASSET_TAGS = (); }; };
-		1D998F6B1BCD91E000D56F27 /* KFAutoScrollTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEBCD6019F9AA7F00540776 /* KFAutoScrollTextView.m */; settings = {ASSET_TAGS = (); }; };
-		1D998F6C1BCD91E300D56F27 /* KFGradientScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEBCD6219F9AA8000540776 /* KFGradientScrollView.m */; settings = {ASSET_TAGS = (); }; };
+		1D998F691BCD910300D56F27 /* KFAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEBCD5C19F9AA7F00540776 /* KFAboutWindowController.m */; };
+		1D998F6A1BCD910300D56F27 /* KFAboutWindowStyleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEBCD5E19F9AA7F00540776 /* KFAboutWindowStyleModel.m */; };
+		1D998F6B1BCD91E000D56F27 /* KFAutoScrollTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEBCD6019F9AA7F00540776 /* KFAutoScrollTextView.m */; };
+		1D998F6C1BCD91E300D56F27 /* KFGradientScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEBCD6219F9AA8000540776 /* KFGradientScrollView.m */; };
 		1D998F6D1BCD91E900D56F27 /* KFAboutWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEBCD5B19F9AA7F00540776 /* KFAboutWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D998F6E1BCD91E900D56F27 /* KFAboutWindowStyleModel.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEBCD5D19F9AA7F00540776 /* KFAboutWindowStyleModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D998F6F1BCD91E900D56F27 /* KFAutoScrollTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEBCD5F19F9AA7F00540776 /* KFAutoScrollTextView.h */; settings = {ASSET_TAGS = (); }; };
-		1D998F701BCD91E900D56F27 /* KFGradientScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEBCD6119F9AA8000540776 /* KFGradientScrollView.h */; settings = {ASSET_TAGS = (); }; };
-		1D998F711BCD91E900D56F27 /* KFWebsiteButtonBundleNameTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEBCD6319F9AA8000540776 /* KFWebsiteButtonBundleNameTransformer.h */; settings = {ASSET_TAGS = (); }; };
-		1D998F721BCD91E900D56F27 /* KFWebsiteButtonBundleNameTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEBCD6419F9AA8000540776 /* KFWebsiteButtonBundleNameTransformer.m */; settings = {ASSET_TAGS = (); }; };
-		1D998F731BCD91E900D56F27 /* NSAttributedString+CocoaPods.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEBCD6519F9AA8000540776 /* NSAttributedString+CocoaPods.h */; settings = {ASSET_TAGS = (); }; };
-		1D998F741BCD91E900D56F27 /* NSAttributedString+CocoaPods.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEBCD6619F9AA8000540776 /* NSAttributedString+CocoaPods.m */; settings = {ASSET_TAGS = (); }; };
+		1D998F6F1BCD91E900D56F27 /* KFAutoScrollTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEBCD5F19F9AA7F00540776 /* KFAutoScrollTextView.h */; };
+		1D998F701BCD91E900D56F27 /* KFGradientScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEBCD6119F9AA8000540776 /* KFGradientScrollView.h */; };
+		1D998F711BCD91E900D56F27 /* KFWebsiteButtonBundleNameTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEBCD6319F9AA8000540776 /* KFWebsiteButtonBundleNameTransformer.h */; };
+		1D998F721BCD91E900D56F27 /* KFWebsiteButtonBundleNameTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEBCD6419F9AA8000540776 /* KFWebsiteButtonBundleNameTransformer.m */; };
+		1D998F731BCD91E900D56F27 /* NSAttributedString+CocoaPods.h in Headers */ = {isa = PBXBuildFile; fileRef = FDEBCD6519F9AA8000540776 /* NSAttributedString+CocoaPods.h */; };
+		1D998F741BCD91E900D56F27 /* NSAttributedString+CocoaPods.m in Sources */ = {isa = PBXBuildFile; fileRef = FDEBCD6619F9AA8000540776 /* NSAttributedString+CocoaPods.m */; };
 		1D998F7F1BCDA41C00D56F27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D998F7E1BCDA41C00D56F27 /* AppDelegate.swift */; };
 		1D998F811BCDA41C00D56F27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D998F801BCDA41C00D56F27 /* Assets.xcassets */; };
 		1D998F841BCDA41C00D56F27 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D998F821BCDA41C00D56F27 /* MainMenu.xib */; };
 		1D998F891BCDA43200D56F27 /* KFAboutWindow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D998F5C1BCD90D500D56F27 /* KFAboutWindow.framework */; };
 		1D998F8A1BCDA43200D56F27 /* KFAboutWindow.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1D998F5C1BCD90D500D56F27 /* KFAboutWindow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1D998F8E1BCDA95600D56F27 /* KFAboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDEBCD5819F9AA7F00540776 /* KFAboutWindow.xib */; };
 		1DA9F25718C887D0001BAB97 /* Acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DA9F25618C887D0001BAB97 /* Acknowledgements.plist */; };
 		1DA9F25D18C8A515001BAB97 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA9F25C18C8A515001BAB97 /* QuartzCore.framework */; };
-		FDEBCD6719F9AA8000540776 /* KFAboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDEBCD5819F9AA7F00540776 /* KFAboutWindow.xib */; };
+		F4B717D61D93D78C00FE579F /* ColoredButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B717D51D93D78C00FE579F /* ColoredButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		1D998F851BCDA41C00D56F27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DA9F25618C887D0001BAB97 /* Acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Acknowledgements.plist; sourceTree = "<group>"; };
 		1DA9F25C18C8A515001BAB97 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F4B717D51D93D78C00FE579F /* ColoredButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColoredButton.swift; sourceTree = "<group>"; };
 		FDEBCD5819F9AA7F00540776 /* KFAboutWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KFAboutWindow.xib; sourceTree = "<group>"; };
 		FDEBCD5B19F9AA7F00540776 /* KFAboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFAboutWindowController.h; sourceTree = "<group>"; };
 		FDEBCD5C19F9AA7F00540776 /* KFAboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFAboutWindowController.m; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 				FDEBCD6419F9AA8000540776 /* KFWebsiteButtonBundleNameTransformer.m */,
 				FDEBCD6519F9AA8000540776 /* NSAttributedString+CocoaPods.h */,
 				FDEBCD6619F9AA8000540776 /* NSAttributedString+CocoaPods.m */,
+				F4B717D51D93D78C00FE579F /* ColoredButton.swift */,
 			);
 			path = osx;
 			sourceTree = "<group>";
@@ -431,7 +434,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = KF;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "KF Interactive";
 				TargetAttributes = {
 					1D8FD4D418C7D7CE00D9A9FA = {
@@ -439,6 +442,7 @@
 					};
 					1D998F5B1BCD90D500D56F27 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 					};
 					1D998F7B1BCDA41C00D56F27 = {
 						CreatedOnToolsVersion = 7.0;
@@ -472,7 +476,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D8FD4C218C7D7CD00D9A9FA /* InfoPlist.strings in Resources */,
-				FDEBCD6719F9AA8000540776 /* KFAboutWindow.xib in Resources */,
 				1D8FD4D018C7D7CD00D9A9FA /* Images.xcassets in Resources */,
 				1DA9F25718C887D0001BAB97 /* Acknowledgements.plist in Resources */,
 				1D8FD4C818C7D7CD00D9A9FA /* Credits.rtf in Resources */,
@@ -492,6 +495,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D998F8E1BCDA95600D56F27 /* KFAboutWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +533,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D998F6A1BCD910300D56F27 /* KFAboutWindowStyleModel.m in Sources */,
+				F4B717D61D93D78C00FE579F /* ColoredButton.swift in Sources */,
 				1D998F741BCD91E900D56F27 /* NSAttributedString+CocoaPods.m in Sources */,
 				1D998F721BCD91E900D56F27 /* KFWebsiteButtonBundleNameTransformer.m in Sources */,
 				1D998F6B1BCD91E000D56F27 /* KFAutoScrollTextView.m in Sources */,
@@ -621,14 +626,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -659,14 +669,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -675,18 +690,21 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
 		1D8FD4E618C7D7CE00D9A9FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KFAboutWindowPreview/KFAboutWindowPreview-Prefix.pch";
 				INFOPLIST_FILE = "KFAboutWindowPreview/KFAboutWindowPreview-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kfinteractive.osx.ui.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -696,12 +714,14 @@
 		1D8FD4E718C7D7CE00D9A9FA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KFAboutWindowPreview/KFAboutWindowPreview-Prefix.pch";
 				INFOPLIST_FILE = "KFAboutWindowPreview/KFAboutWindowPreview-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kfinteractive.osx.ui.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -755,7 +775,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -771,11 +791,13 @@
 				INFOPLIST_FILE = KFAboutWindow/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kf-interactive.osx.KFAboutWindow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -786,7 +808,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -801,11 +823,12 @@
 				INFOPLIST_FILE = KFAboutWindow/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kf-interactive.osx.KFAboutWindow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -814,6 +837,7 @@
 		1D998F871BCDA41C00D56F27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -830,12 +854,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kf-interactive.osx.KFAboutWindowPreview-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
 		1D998F881BCDA41C00D56F27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -851,6 +877,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kf-interactive.osx.KFAboutWindowPreview-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -900,6 +927,7 @@
 				1D998F881BCDA41C00D56F27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

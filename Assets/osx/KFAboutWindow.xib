@@ -1,15 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="KFAboutWindowController">
             <connections>
                 <outlet property="appIconImageView" destination="d1v-7U-eFh" id="YP7-JS-YLJ"/>
                 <outlet property="backgroundImageView" destination="Mai-NF-7SZ" id="10m-Jv-EuA"/>
-                <outlet property="backgroundView" destination="pAY-dC-RMX" id="UHh-p1-Hvf"/>
+                <outlet property="backgroundView" destination="2" id="HGm-AR-4tc"/>
                 <outlet property="bundleNameLabel" destination="jBb-2a-idr" id="r72-EN-fwg"/>
                 <outlet property="humanReadableCopyrightLabel" destination="TmW-xh-BIy" id="kl6-l6-ZPf"/>
                 <outlet property="scrollTextView" destination="s7r-p9-WmY" id="whF-h1-EN1"/>
@@ -25,7 +24,7 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="KFAboutWindow" animationBehavior="default" id="1">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <rect key="contentRect" x="196" y="240" width="560" height="320"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
             <view key="contentView" id="2">
                 <rect key="frame" x="0.0" y="0.0" width="560" height="320"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,16 +37,16 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="HyX-dY-9qp"/>
                             </imageView>
                             <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPY-md-Kp1" customClass="KFGradientScrollView">
-                                <rect key="frame" x="214" y="51" width="328" height="140"/>
+                                <rect key="frame" x="214" y="51" width="328" height="142"/>
                                 <clipView key="contentView" copiesOnScroll="NO" id="unt-4E-7mq">
                                     <rect key="frame" x="0.0" y="0.0" width="328" height="142"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView editable="NO" selectable="NO" importsGraphics="NO" richText="NO" findStyle="panel" continuousSpellChecking="YES" verticallyResizable="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="s7r-p9-WmY" customClass="KFAutoScrollTextView">
-                                            <rect key="frame" x="0.0" y="0.0" width="328" height="142"/>
+                                        <textView editable="NO" selectable="NO" importsGraphics="NO" richText="NO" findStyle="panel" continuousSpellChecking="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="s7r-p9-WmY" customClass="KFAutoScrollTextView">
+                                            <rect key="frame" x="0.0" y="2" width="328" height="142"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="328" height="140"/>
+                                            <size key="minSize" width="328" height="142"/>
                                             <size key="maxSize" width="463" height="10000000"/>
                                             <attributedString key="textStorage">
                                                 <fragment content="Text">
@@ -58,8 +57,6 @@
                                                 </fragment>
                                             </attributedString>
                                             <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="328" height="140"/>
-                                            <size key="maxSize" width="463" height="10000000"/>
                                             <connections>
                                                 <binding destination="-2" name="attributedString" keyPath="self.attributedString" id="qEi-SN-Ok3"/>
                                                 <binding destination="-2" name="editable" keyPath="self.disabledOption" id="cBH-xi-Vty"/>
@@ -92,7 +89,7 @@
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="14L-ty-8V1">
-                                <rect key="frame" x="212" y="199" width="332" height="15"/>
+                                <rect key="frame" x="212" y="209" width="332" height="15"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="h36-g5-cyM">
                                     <font key="font" size="11" name="HelveticaNeue"/>
                                     <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
@@ -138,7 +135,7 @@
                             <constraint firstItem="Mai-NF-7SZ" firstAttribute="leading" secondItem="pAY-dC-RMX" secondAttribute="leading" id="A84-rp-KXB"/>
                             <constraint firstItem="d1v-7U-eFh" firstAttribute="top" secondItem="jBb-2a-idr" secondAttribute="top" id="IiF-gG-ppj"/>
                             <constraint firstItem="d1v-7U-eFh" firstAttribute="top" secondItem="pAY-dC-RMX" secondAttribute="top" constant="20" symbolic="YES" id="RTQ-af-ZyD"/>
-                            <constraint firstItem="14L-ty-8V1" firstAttribute="top" secondItem="jBb-2a-idr" secondAttribute="bottom" constant="8" symbolic="YES" id="RZ5-T2-1eu"/>
+                            <constraint firstItem="14L-ty-8V1" firstAttribute="top" secondItem="jBb-2a-idr" secondAttribute="bottom" constant="-2" id="RZ5-T2-1eu"/>
                             <constraint firstItem="TmW-xh-BIy" firstAttribute="trailing" secondItem="KPY-md-Kp1" secondAttribute="trailing" id="ST5-Eq-dTR"/>
                             <constraint firstItem="KPY-md-Kp1" firstAttribute="leading" secondItem="TmW-xh-BIy" secondAttribute="leading" id="SxE-fM-drQ"/>
                             <constraint firstAttribute="trailing" secondItem="14L-ty-8V1" secondAttribute="trailing" constant="20" symbolic="YES" id="WAa-ZF-8Qv"/>
@@ -150,15 +147,12 @@
                             <constraint firstItem="KPY-md-Kp1" firstAttribute="trailing" secondItem="14L-ty-8V1" secondAttribute="trailing" id="oeG-d5-pqm"/>
                             <constraint firstItem="TmW-xh-BIy" firstAttribute="top" secondItem="KPY-md-Kp1" secondAttribute="bottom" constant="16" id="qAV-bF-KGg"/>
                             <constraint firstAttribute="trailing" secondItem="jBb-2a-idr" secondAttribute="trailing" constant="20" symbolic="YES" id="r8g-Hl-Gpe"/>
-                            <constraint firstItem="KPY-md-Kp1" firstAttribute="top" secondItem="14L-ty-8V1" secondAttribute="bottom" constant="8" symbolic="YES" id="u5P-vH-Oyp"/>
+                            <constraint firstItem="KPY-md-Kp1" firstAttribute="top" secondItem="14L-ty-8V1" secondAttribute="bottom" constant="16" id="u5P-vH-Oyp"/>
                         </constraints>
                     </customView>
-                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KpE-Xt-NXa">
-                        <rect key="frame" x="385" y="8" width="161" height="32"/>
-                        <constraints>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="EA8-Yf-pEA"/>
-                        </constraints>
-                        <buttonCell key="cell" type="push" title="Acknowledgements" bezelStyle="rounded" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oGf-Ti-3qh">
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KpE-Xt-NXa" customClass="ColoredButton" customModule="KFAboutWindow" customModuleProvider="target">
+                        <rect key="frame" x="254" y="15" width="115" height="19"/>
+                        <buttonCell key="cell" type="roundRect" title="Acknowledgements" bezelStyle="roundedRect" alignment="center" refusesFirstResponder="YES" imageScaling="proportionallyDown" inset="2" id="oGf-Ti-3qh">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="cellTitle"/>
                         </buttonCell>
@@ -172,12 +166,9 @@
                             <binding destination="-2" name="title" keyPath="self.toggleButtonText" id="JQ4-6v-TlA"/>
                         </connections>
                     </button>
-                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IWS-wC-pcR">
-                        <rect key="frame" x="172" y="8" width="213" height="32"/>
-                        <constraints>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="jvZ-uW-Q86"/>
-                        </constraints>
-                        <buttonCell key="cell" type="push" title="Visit BundleName's Website" bezelStyle="rounded" alignment="center" refusesFirstResponder="YES" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eik-H8-4NU">
+                    <button horizontalHuggingPriority="1000" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IWS-wC-pcR" customClass="ColoredButton" customModule="KFAboutWindow" customModuleProvider="target">
+                        <rect key="frame" x="377" y="15" width="163" height="19"/>
+                        <buttonCell key="cell" type="roundRect" title="Visit BundleName's Website" bezelStyle="roundedRect" alignment="center" refusesFirstResponder="YES" imageScaling="proportionallyDown" inset="2" id="eik-H8-4NU">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="cellTitle"/>
                         </buttonCell>
@@ -198,11 +189,11 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="pAY-dC-RMX" firstAttribute="top" secondItem="2" secondAttribute="top" id="Hi1-jq-fXt"/>
-                    <constraint firstAttribute="trailing" secondItem="KpE-Xt-NXa" secondAttribute="trailing" constant="20" symbolic="YES" id="O7e-Ce-07Z"/>
-                    <constraint firstAttribute="bottom" secondItem="IWS-wC-pcR" secondAttribute="bottom" constant="15" id="R0B-lI-XWC"/>
-                    <constraint firstAttribute="bottom" secondItem="KpE-Xt-NXa" secondAttribute="bottom" constant="15" id="VLU-Ce-sJa"/>
+                    <constraint firstItem="KpE-Xt-NXa" firstAttribute="baseline" secondItem="IWS-wC-pcR" secondAttribute="baseline" id="TZC-20-1vk"/>
+                    <constraint firstAttribute="trailing" secondItem="IWS-wC-pcR" secondAttribute="trailing" constant="20" id="WNF-gt-NUM"/>
+                    <constraint firstAttribute="bottom" secondItem="IWS-wC-pcR" secondAttribute="bottom" constant="15" id="mbk-zK-eos"/>
                     <constraint firstItem="pAY-dC-RMX" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="nKL-xr-mBc"/>
-                    <constraint firstItem="KpE-Xt-NXa" firstAttribute="leading" secondItem="IWS-wC-pcR" secondAttribute="trailing" constant="12" symbolic="YES" id="oNv-97-7vt"/>
+                    <constraint firstItem="IWS-wC-pcR" firstAttribute="leading" secondItem="KpE-Xt-NXa" secondAttribute="trailing" constant="8" id="pBR-7p-xeE"/>
                     <constraint firstAttribute="trailing" secondItem="pAY-dC-RMX" secondAttribute="trailing" constant="-2" id="yb8-5M-iIQ"/>
                 </constraints>
             </view>
