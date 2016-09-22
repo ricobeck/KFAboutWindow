@@ -11,6 +11,7 @@
 #import "KFAutoScrollTextView.h"
 #import "KFAboutWindowStyleModel.h"
 #import "KFGradientScrollView.h"
+#import <KFAboutWindow/KFAboutWindow-Swift.h>
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -35,8 +36,8 @@ static const unsigned short KFEscapeKeyCode = 53;
 @property (weak) IBOutlet KFGradientScrollView *scrollView;
 @property (unsafe_unretained) IBOutlet KFAutoScrollTextView *scrollTextView;
 
-@property (weak) IBOutlet NSButton *toggleDisplayButton;
-@property (weak) IBOutlet NSButton *visitWebsiteButton;
+@property (weak) IBOutlet ColoredButton *toggleDisplayButton;
+@property (weak) IBOutlet ColoredButton *visitWebsiteButton;
 
 @property (nonatomic, copy) NSAttributedString *attributedString;
 @property (nonatomic) KFAboutDisplayMode displayMode;
@@ -74,7 +75,7 @@ static const unsigned short KFEscapeKeyCode = 53;
     [self.backgroundView setWantsLayer:YES];
 
     self.backgroundViewSeparator = [CALayer layer];
-    self.backgroundViewSeparator.borderWidth = 1;
+    self.backgroundViewSeparator.borderWidth = 0;
     CGRect borderRect = CGRectInset(self.backgroundView.layer.bounds, -2, -1);
     borderRect.origin.y += 1;
     self.backgroundViewSeparator.frame = borderRect;
@@ -194,6 +195,13 @@ static const unsigned short KFEscapeKeyCode = 53;
     if (styleModel.humanReadableCopyrightLabelFont) {
         self.humanReadableCopyrightLabel.font = styleModel.humanReadableCopyrightLabelFont;
     }
+
+    if (styleModel.visitWebsiteButtonColor) {
+        self.visitWebsiteButton.color = styleModel.visitWebsiteButtonColor;
+    }
+    if (styleModel.toggleDisplayButtonColor) {
+        self.toggleDisplayButton.color = styleModel.toggleDisplayButtonColor;
+    }
 }
 
 #pragma mark - Window show/hide
@@ -208,34 +216,8 @@ static const unsigned short KFEscapeKeyCode = 53;
     
     [self updateModeValues];
     
-    [self addObservers];
     [super showWindow:sender];
     
-}
-
-
-- (void)addObservers
-{
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(windowDidResignKeyOrMainNotification:) name:NSWindowDidResignKeyNotification object:self.window];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(windowDidResignKeyOrMainNotification:) name:NSWindowDidResignMainNotification object:self.window];
-}
-
-
-- (void)windowDidResignKeyOrMainNotification:(NSNotification *)notification
-{
-    [self removeObservers];
-    [self.window setIsVisible:NO];
-    [self.scrollTextView stopScrolling];
-    
-    self.displayMode = KFAboutDisplayModeCredits;
-    [self updateModeValues];
-}
-
-
-- (void)removeObservers
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:NSWindowDidResignKeyNotification object:self];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:NSWindowDidResignMainNotification object:self];
 }
 
 #pragma mark - Keystroke Handling
