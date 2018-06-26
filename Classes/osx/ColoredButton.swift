@@ -10,7 +10,7 @@ import AppKit
 
 @available(OSX 10.10, *)
 public class ColoredButton: NSButton {
-    public var color: NSColor = .black {
+    @objc public var color: NSColor = .textColor {
         didSet {
             redraw()
         }
@@ -18,6 +18,12 @@ public class ColoredButton: NSButton {
 
     required public init?(coder: NSCoder) {
         super.init(coder: coder)
+        
+        wantsLayer = true
+        layerContentsRedrawPolicy = .onSetNeedsDisplay
+        layer?.cornerRadius = 10
+        layer?.borderWidth = 1.0
+        
         redraw()
     }
 
@@ -28,18 +34,14 @@ public class ColoredButton: NSButton {
     }
 
     private func redraw() {
-        wantsLayer = true
-        layerContentsRedrawPolicy = .onSetNeedsDisplay
-        layer?.cornerRadius = 10
-        layer?.borderWidth = 1.0
-        layer?.borderColor = color.cgColor
-
-        let paragraphStyle = NSParagraphStyle.default().mutableCopy() as! NSMutableParagraphStyle
+        guard let font = font else { return }
+        
+        let paragraphStyle = NSParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
         paragraphStyle.alignment = .center
-        attributedTitle = NSAttributedString(string: title, attributes: [NSFontAttributeName: font!, NSParagraphStyleAttributeName: paragraphStyle, NSForegroundColorAttributeName: color])
+        attributedTitle = NSAttributedString(string: title, attributes: [.font: font, .paragraphStyle: paragraphStyle, .foregroundColor: color])
     }
 
-    override public var wantsUpdateLayer:Bool{
+    override public var wantsUpdateLayer:Bool {
         return true
     }
 
@@ -49,6 +51,7 @@ public class ColoredButton: NSButton {
         } else {
             layer?.backgroundColor = nil
         }
+        layer?.borderColor = color.cgColor
         super.updateLayer()
     }
 
@@ -63,6 +66,6 @@ public class ColoredButton: NSButton {
 
 extension NSColor {
     var lighter: NSColor {
-        return NSColor(calibratedRed: redComponent, green: greenComponent, blue: blueComponent, alpha: 0.15)
+        return withAlphaComponent(0.15)
     }
 }

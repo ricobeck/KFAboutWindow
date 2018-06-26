@@ -15,7 +15,7 @@
     KFAboutWindowStyleModel *defaultStyle = [[KFAboutWindowStyleModel alloc] init];
 
     // content background
-    defaultStyle.backgroundColor                  = [NSColor whiteColor];
+    defaultStyle.backgroundColor                  = [NSColor windowBackgroundColor];
     defaultStyle.backgroundSeparatorColor         = [NSColor gridColor];
     defaultStyle.backgroundImage                  = nil;
 
@@ -25,15 +25,15 @@
     defaultStyle.humanReadableCopyrightLabelColor = [NSColor disabledControlTextColor];
 
     // scrolling textView
-    defaultStyle.acknowledgementsTextColor        = [NSColor textColor];
+    defaultStyle.acknowledgementsTextColor        = [NSColor controlTextColor];
 
     // fonts
     defaultStyle.bundleNameLabelFont              = [NSFont boldSystemFontOfSize:22.0];
     defaultStyle.versionLabelFont                 = [NSFont boldSystemFontOfSize:11.0];
     defaultStyle.humanReadableCopyrightLabelFont  = [NSFont systemFontOfSize:11.0];
 
-    defaultStyle.visitWebsiteButtonColor          = [NSColor blackColor];
-    defaultStyle.toggleDisplayButtonColor         = [NSColor blackColor];
+    defaultStyle.visitWebsiteButtonColor          = [NSColor textColor];
+    defaultStyle.toggleDisplayButtonColor         = [NSColor textColor];
 
     return defaultStyle;
 }
