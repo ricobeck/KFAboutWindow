@@ -67,7 +67,6 @@ static const unsigned short KFEscapeKeyCode = 53;
     return self;
 }
 
-
 - (void)windowDidLoad
 {
     [super windowDidLoad];
@@ -111,8 +110,11 @@ static const unsigned short KFEscapeKeyCode = 53;
 
     KFAboutWindowStyleModel *defaultStyle = [KFAboutWindowStyleModel defaultStyle];
     [self applyStyle:defaultStyle];
-}
 
+    [[NSNotificationCenter defaultCenter] addObserverForName:@"HIMenuBarAppearanceDidChangeNotification" object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+        [self applyStyle:[KFAboutWindowStyleModel defaultStyle]];
+    }];
+}
 
 - (void)updateModeValues
 {
@@ -145,7 +147,7 @@ static const unsigned short KFEscapeKeyCode = 53;
 
 - (void)setBackgroundColor:(NSColor *)backgroundColor
 {
-    self.backgroundView.layer.backgroundColor = [backgroundColor CGColor];
+//    self.backgroundView.layer.backgroundColor = [backgroundColor CGColor];
     self.scrollTextView.backgroundColor = backgroundColor;
     self.scrollView.gradientColor = backgroundColor;
 }
@@ -181,6 +183,10 @@ static const unsigned short KFEscapeKeyCode = 53;
         NSMutableAttributedString *styledAcknowledgements = [self.acknowledgements mutableCopy];
         [styledAcknowledgements setAttributes:@{NSForegroundColorAttributeName:styleModel.acknowledgementsTextColor} range:NSMakeRange(0, [self.acknowledgements length])];
         self.acknowledgements = [styledAcknowledgements copy];
+        
+        NSMutableAttributedString *styledCredits = [self.credits mutableCopy];
+        [styledCredits setAttributes:@{NSForegroundColorAttributeName:styleModel.acknowledgementsTextColor} range:NSMakeRange(0, [self.credits length])];
+        self.credits = styledCredits;
     }
     if (styleModel.humanReadableCopyrightLabelColor != nil)
     {
